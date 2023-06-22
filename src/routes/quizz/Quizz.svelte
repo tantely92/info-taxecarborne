@@ -1,45 +1,79 @@
 <script>
     import { createClient } from '@supabase/supabase-js';
+    import { onMount } from 'svelte';
 
-    const supabaseUrl = 'https://your-supabase-url.supabase.co';
-    const supabaseKey = 'your-supabase-api-key';
+    const supabaseUrl = 'https://aofmxxlgvsjfmqdnqpvl.supabase.co';
+    const supabaseKey = '';
     const supabase = createClient(supabaseUrl, supabaseKey);
+    
+    
 
-    let questions = [
-      { id: 1, question: 'La Terre est plate', answer: null },
-      { id: 2, question: 'Le soleil tourne autour de la Terre', answer: null },
-      { id: 3, question: 'L\'eau bout à 100 degrés Celsius', answer: null }
-    ];
-  
+/**
+   * @type {any[]}
+   */
+let questions = [];
+
+    onMount(async () => {
+      const response = await fetchQuestions();
+      questions = response;
+    });
+
+    // Fonction pour récupérer les questions depuis Supabase
+    const fetchQuestions = async () => {
+      const { data, error } = await supabase
+        .from('questions')
+        .select('id, text');
+
+      if (error) {
+        console.error(error);
+        return [];
+      }
+
+      const questionsList = data.map((question) => ({
+        id: question.id,
+        question: question.text,
+        answer: '' // Remplacez cette valeur par la logique d'obtention de la réponse correspondante
+      }));
+
+      return questionsList;
+    };
+
     let answers = {};
   
+    /**
+   * @param {Event & { currentTarget: EventTarget & HTMLInputElement; }} event
+   * @param {string | number} questionId
+   */
     function handleAnswer(event, questionId) {
+      // @ts-ignore
       const value = event.target.value;
+      // @ts-ignore
       answers[questionId] = value;
     }
   
     function handleSubmit() {
       // Traitement des réponses du formulaire
+      // @ts-ignore
       questions = questions.map(question => ({ ...question, answer: answers[question.id] }));
       console.log(questions);
     }
+
     function handleSubmitDb() {
         // Traitement des réponses du formulaire
-        questions = questions.map(question => ({ ...question, answer: answers[question.id] }));
-        console.log(questions);
+        let saved = [];
+        saved = questions.map(question => ({ questionId : question.id, userId : 'Toto', answer: answers[question.id] }));
+        console.log(saved);
 
         // Insérer les données dans la base de données Supabase
         supabase
-            .from('table_name') // Remplacez 'table_name' par le nom réel de votre table
-            .insert(questions)
+            .from('answers') // Remplacez 'table_name' par le nom réel de votre table
+            .insert(saved)
             .then(response => {
             console.log('Données insérées avec succès:', response);
             // Effectuer d'autres actions après l'insertion des données
-            })
-            .catch((/** @type {any} */ error) => {
-            console.error('Erreur lors de l\'insertion des données:', error);
-            // Gérer les erreurs d'insertion des données
-            });
+            answers = {};
+            },
+            error => console.error('Erreur lors de l\'insertion des données:', error));
 }
 
   </script>
@@ -47,7 +81,7 @@
   <main>
     <h1 class="text-4xl font-bold mb-4 ml-4">Liste de questions</h1>
   
-    <form on:submit|preventDefault={handleSubmit} class="ml-4">
+    <form on:submit|preventDefault={handleSubmitDb} class="ml-4">
       {#each questions as question}
         <div class="mb-4">
           <p>{question.question}</p>
