@@ -6,7 +6,7 @@
   <div class="container mx-auto px-4 flex items-center justify-between">
     <div>
       <a href="/">
-        <img src="logo.png" alt="Logo" class="h-8">
+        <img  src="logo.png" alt="Logo" class="h-23 ">
       </a>
     </div>
     <div class="flex items-center">

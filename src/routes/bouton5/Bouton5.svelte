@@ -1,4 +1,4 @@
-<script lang>
+<script>
     import { supabase } from "../../supabaseClient";
 
     import { createForm } from "svelte-forms-lib";
@@ -12,6 +12,9 @@
         message: yup.string().required('Please enter a message')
     });
 
+    /**
+     * @type {boolean | null}
+     */
     let apiResult = null;
 
     const { form, errors, handleChange, handleSubmit, isSubmitting, handleReset } = createForm({
@@ -20,15 +23,19 @@
         onSubmit: async values => {
 
             try {
+                console.log(values)
                 var result = await supabase.from("contact").insert(values);
 
                 if (result.data != null) {
+                    console.log(result.data)
                     apiResult = true;
                 } else {
+                    console.log(values)
                     apiResult = false;
                 }
 
             } catch (ex) {
+                console.log(ex)
                 apiResult = false;
             }
 
