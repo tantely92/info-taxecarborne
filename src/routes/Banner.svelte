@@ -8,10 +8,10 @@
     </div>
     <div class="flex items-center">
       <a href="/info" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">S'informer</a>
-      <a href="#" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Bouton 2</a>
-      <a href="#" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Bouton 3</a>
-      <a href="#" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Bouton 4</a>
-      <a href="#" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Bouton 5</a>
+      <a href="/bouton2" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">S'inspirer</a>
+      <a href="bouton3" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Améliorer</a>
+      <a href="/bouton4" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Actualités</a>
+      <a href="/bouton5" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Nous contacter</a>
     </div>
   </div>
 </div>
