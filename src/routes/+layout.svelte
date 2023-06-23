@@ -1,6 +1,7 @@
 <script>
   import Banner from './Banner.svelte';
-  </script>
+  import "carbon-components-svelte/css/g10.css";
+</script>
   
   <div>
     <Banner/>
