@@ -2,9 +2,11 @@
     import { createClient } from '@supabase/supabase-js';
     import { onMount } from 'svelte';
 
-    const supabaseUrl = 'https://aofmxxlgvsjfmqdnqpvl.supabase.co';
-    const supabaseKey = '';
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
     const supabase = createClient(supabaseUrl, supabaseKey);
+      // @ts-ignore
+      
     
     
 
@@ -14,6 +16,7 @@
 let questions = [];
 
     onMount(async () => {
+
       const response = await fetchQuestions();
       questions = response;
     });
