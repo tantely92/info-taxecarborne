@@ -1,21 +1,12 @@
 <script>
-    import { createClient } from '@supabase/supabase-js';
-    import { onMount } from 'svelte';
+  import { createEventDispatcher } from 'svelte';
+  import { supabase } from '../../supabaseClient';
+  import { onMount } from 'svelte';
 
-    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-    const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
-    const supabase = createClient(supabaseUrl, supabaseKey);
-      // @ts-ignore
-      
-    
-    
-
-/**
-   * @type {any[]}
-   */
-let questions = [];
-
-    onMount(async () => {
+  // Liste des questions et réponses
+  let questions = [];
+  
+  onMount(async () => {
 
       const response = await fetchQuestions();
       questions = response;
@@ -41,71 +32,57 @@ let questions = [];
       return questionsList;
     };
 
-    let answers = {};
-  
-    /**
-   * @param {Event & { currentTarget: EventTarget & HTMLInputElement; }} event
-   * @param {string | number} questionId
-   */
-    function handleAnswer(event, questionId) {
-      // @ts-ignore
-      const value = event.target.value;
-      // @ts-ignore
-      answers[questionId] = value;
-    }
-  
-    function handleSubmit() {
-      // Traitement des réponses du formulaire
-      // @ts-ignore
-      questions = questions.map(question => ({ ...question, answer: answers[question.id] }));
-      console.log(questions);
-    }
+  let currentQuestion = 0; // Index de la question actuelle
 
-    function handleSubmitDb() {
-        // Traitement des réponses du formulaire
-        let saved = [];
-        saved = questions.map(question => ({ questionId : question.id, userId : 'Toto', answer: answers[question.id] }));
-        console.log(saved);
+  // Fonction pour passer à la question suivante
+  function nextQuestion() {
+    currentQuestion += 1;
+  }
 
-        // Insérer les données dans la base de données Supabase
-        supabase
-            .from('answers') // Remplacez 'table_name' par le nom réel de votre table
-            .insert(saved)
-            .then(response => {
-            console.log('Données insérées avec succès:', response);
-            // Effectuer d'autres actions après l'insertion des données
-            answers = {};
-            },
-            error => console.error('Erreur lors de l\'insertion des données:', error));
-}
+  // Fonction pour sauvegarder la réponse
+  function saveAnswer(answer) {
+    questions[currentQuestion].answer = answer;
+    nextQuestion();
+  }
 
-  </script>
-  
-  <main>
-    <h1 class="text-4xl font-bold mb-4 ml-4">Liste de questions</h1>
-  
-    <form on:submit|preventDefault={handleSubmitDb} class="ml-4">
-      {#each questions as question}
-        <div class="mb-4">
-          <p>{question.question}</p>
-          <div class="flex items-center mt-2">
-            <label class="inline-flex items-center">
-              <input type="radio" class="form-radio" name={`question-${question.id}`} value="true" on:change={event => handleAnswer(event, question.id)} checked={answers[question.id] === 'true'} />
-              <span class="ml-2">Vrai</span>
-            </label>
-            <label class="inline-flex items-center ml-4">
-              <input type="radio" class="form-radio" name={`question-${question.id}`} value="false" on:change={event => handleAnswer(event, question.id)} checked={answers[question.id] === 'false'} />
-              <span class="ml-2">Faux</span>
-            </label>
-          </div>
-        </div>
-      {/each}
-  
-      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Soumettre</button>
-    </form>
-  </main>
-  
-  
+  // Fonction pour réinitialiser les réponses
+  function resetAnswers() {
+    questions.forEach(question => {
+      question.answer = null;
+    });
+    currentQuestion = 0;
+  }
 
-  
-  
+  const dispatch = createEventDispatcher();
+
+  // Fonction pour soumettre les réponses
+  function submitAnswers() {
+    const answers = questions.map(question => question.answer);
+    dispatch('submit', answers);
+    resetAnswers();
+  }
+</script>
+
+<main>
+  {#if currentQuestion < questions.length}
+    <h2>{questions[currentQuestion].question}</h2>
+    <div>
+      <label>
+        <input type="radio" bind:group={questions[currentQuestion].answer} value="true" />
+        VRAI
+      </label>
+      <label>
+        <input type="radio" bind:group={questions[currentQuestion].answer} value="false" />
+        FAUX
+      </label>
+      <label>
+        <input type="radio" bind:group={questions[currentQuestion].answer} value="unknown" />
+        JE NE SAIS PAS
+      </label>
+    </div>
+    <button on:click={nextQuestion}>Suivant</button>
+  {:else}
+    <p>Toutes les questions ont été répondues.</p>
+    <button on:click={submitAnswers}>Soumettre les réponses</button>
+  {/if}
+</main>
