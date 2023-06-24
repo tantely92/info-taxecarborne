@@ -1,9 +1,10 @@
 <script>
     import Info from "./Info.svelte";
+	import Quizz from "./quizz/Quizz.svelte";
 </script>
 
 <svelte:head>
 	<title>S'informer</title>
 	<meta name="description" content="Information sur la taxe carbone" />
 </svelte:head>
-<Info/>
+<Quizz/>
