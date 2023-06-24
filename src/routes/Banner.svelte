@@ -17,8 +17,7 @@
           S'informer
         </a>
         {#if showDropdown_info}
-          <div class="absolute bg-white mt-2 py-2 w-48 shadow-lg rounded fade-in"
-            on:mouseover="{() => showDropdown_info = true}" on:mouseleave="{() => showDropdown_info = false}">
+          <div class="absolute bg-white mt-2 py-2 w-48 shadow-lg rounded fade-in" >
             <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-200">TESTEZ VOS CONNAISSANCES</a>
             <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-200">Différents types de tarification carbone</a>
             <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-200">Historique récent en France</a>

@@ -2,32 +2,27 @@
     import Info from "./Info.svelte";
 	import Quizz from "./quizz/Quizz.svelte";
 
-	import { setContext, getContext, onMount } from 'svelte';
-	import { writable } from 'svelte/store';
+	import { beforeUpdate, onMount } from 'svelte';
 
-	const state = writable({
+	let state = {
 		component:'quizz',
 		result:'',
-	});
+	};
 
 	let displayComponent = null;
 	onMount(() => {
 		const infoState = localStorage.getItem('infoState');
 		if (infoState){
 			const{ component, result } = JSON.parse(infoState);
-			displayComponent = component;
+			state.component = component;
+			state.result = result;
 		}
 		else{
-			displayComponent = 'quizz';
+			state.component = 'quizz';
 		}
+  	});
 
-		state.subscribe(newState => {
-			// Sauvegardez l'état dans le stockage local à chaque modification
-			console.log("new state");
-			localStorage.setItem('infoState', JSON.stringify(newState));
-		});
-		console.log('onMount ',infoState);
-  });
+	
 
   // Fonction pour changer l'affichage des sous-composants
 	function updateFromQuizzResult(event) {
@@ -45,11 +40,11 @@
 	<meta name="description" content="Information sur la taxe carbone" />
 </svelte:head>
 <div>
-	{#if displayComponent === "quizz"}
+	{#if state.component === "quizz"}
 		<Quizz on:quizzResult={updateFromQuizzResult}/>
 	{/if}
 
-	{#if displayComponent === "infos"}
+	{#if state.component === "infos"}
 		<Info/>
 	{/if}
 	
