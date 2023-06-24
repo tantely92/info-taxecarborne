@@ -1,4 +1,6 @@
 <script>
+ 
+  
   import Quizz from '../quizz/Quizz.svelte'; // Remplacez 'TestComponent' par le nom de votre composant Svelte
 
   let activeSection = null;
@@ -47,7 +49,7 @@
             {#if activeSection === 1}
             <div class="flex justify-center mt-10">
               <div class="w-1/3 px-4">
-                <a href="#introduction" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#introduction"  class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
                   Introduction
                 </a>
               </div>
@@ -76,7 +78,7 @@
 
               <div class="flex items-center">
 
-                <img src="path_to_image_1.jpg" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Mondecarbone.png" alt="Image 1" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="Introduction" class="text-xl font-bold mb-2">Introduction </h2>
                   <p class="text-gray-700 mb-4">Chiffres et panorama global de la tarification carbone 
@@ -104,7 +106,7 @@
               </div>
               <div class="flex items-center">
 
-                <img src="path_to_image_1.jpg" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Marchecarbone.png" alt="Image 1" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="Marché de quotas carbone entre entreprises cotées"  class="text-xl font-bold mb-2">Marché de quotas carbone entre entreprises cotées </h2>
                   <p class="text-gray-700 mb-4">Marché du carbone: régule les émissions de CO2 en attribuant des quotas aux entreprises. 
@@ -125,7 +127,7 @@
               </div>
               <div class="flex items-center">
 
-                <img src="path_to_image_1.jpg" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Unioneuropenneecologie.png" alt="Image 1" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="Taxe aux frontières Européennes pour les entreprises" class="text-xl font-bold mb-2">Taxe aux frontières Européennes pour les entreprises</h2>
                   <p class="text-gray-700 mb-4">"Mécanisme d'Ajustement Carbone aux Frontières" (MACF) : taxe carbone de l'UE sur certaines importations hors UE. 
@@ -145,7 +147,7 @@
               </div>
               <div class="flex items-center">
 
-                <img src="path_to_image_1.jpg" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Prixducarboneinterne.png" alt="Image 1" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="Prix du carbone en interne pour les entreprises" class="text-xl font-bold mb-2">Prix du carbone en interne pour les entreprises</h2>
                   <p class="text-gray-700 mb-4">Le prix du carbone en interne est une estimation du coût des émissions de CO2 d'une entreprise. 
@@ -169,7 +171,7 @@
               </div>
               <div class="flex items-center">
 
-                <img src="path_to_image_1.jpg" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Taxecarbone.png" alt="Image 1" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="LA Taxe carbone" class="text-xl font-bold mb-2">LA Taxe carbone</h2>
                   <p class="text-gray-700 mb-4">"CCE" et "TICPE" sont deux taxes sur les produits énergétiques en France. 
@@ -213,7 +215,7 @@
 
 
               <div class="flex items-center">
-                <img src="path_to_image_2.jpg" alt="Image 2" class="w-16 h-16 mr-4">
+                <img src="ecotaxe.png" alt="Image 2" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="Les débuts de la taxe carbone en France" class="text-xl font-bold mb-2">Les débuts de la taxe carbone en France </h2>
                   <p class="text-gray-700 mb-4">La taxe carbone en France a été introduite lors du Grenelle de l'environnement en 2007, initialement destinée aux poids lourds pour financer l'entretien des infrastructures de transport et le développement des transports en commun. 
@@ -236,7 +238,7 @@
                 </div>
               </div>
               <div class="flex items-center">
-                <img src="path_to_image_2.jpg" alt="Image 2" class="w-16 h-16 mr-4">
+                <img src="gilletsjaunesmanif.png" alt="Image 2" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes" class="text-xl font-bold mb-2">L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes  </h2>
                   <p class="text-gray-700 mb-4">La loi de finances 2014 a introduit une taxe carbone, s'appliquant à tous les secteurs économiques, pour aider la France à atteindre ses objectifs de réduction des émissions selon les Accords de Paris 2015. 
@@ -255,7 +257,7 @@
                 </div>
               </div>
               <div class="flex items-center">
-                <img src="path_to_image_2.jpg" alt="Image 2" class="w-16 h-16 mr-4">
+                <img src="Nouveautetaxe.png" alt="Image 2" class="w-16 h-16 mr-4">
                 <div>
                   <h2 id="Vers une nouvelle taxe?" class="text-xl font-bold mb-2">Vers une nouvelle taxe ?</h2>
                   <p class="text-gray-700 mb-4">En avril 2021, l'UE s'accorde sur un objectif de réduction des émissions de gaz à effet de serre de 55 % d'ici 2030 et la neutralité carbone d'ici 2050, fixés dans le paquet climatique "Fit for 55 by 2030". 
@@ -274,7 +276,7 @@
             {/if}
             {#if activeSection === 3}
               <div class="flex items-center">
-                <img src="path_to_image_3.jpg" alt="Image 3" class="w-16 h-16 mr-4">
+                <img src="chiffrestaxe.png" alt="Image 3" class="w-16 h-16 mr-4">
                 <div>
                   <h2 class="text-xl font-bold mb-2">Chiffres sur la taxe carbone </h2>
                   <p class="text-gray-700 mb-4">Plus de la moitié du prix de l'essence en France (55,6 % pour le diesel, 58,2 % pour l'essence sans plomb 95) est constituée de taxes (analyse de l'UFIP, octobre 2021). 

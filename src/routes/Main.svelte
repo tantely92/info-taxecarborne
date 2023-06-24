@@ -36,7 +36,7 @@
 	  <div class="bg-gray-200 py-8">
 		<div class="container mx-auto px-4 flex items-center">
 		  <div class="w-2/3">
-			<img src="image.jpg" alt="Image" class="w-full">
+			<img src="Livrearbre.png" alt="Image" class="w-full">
 		  </div>
 		  <div class="w-1/3 ml-4">
 			<h2 class="text-2xl font-bold mb-2">Un rafraichissement des connaissances sur la fiscalité carbone </h2>
@@ -54,7 +54,7 @@
 				<a href="/bouton2" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Je m’inspire </a>
 			  </div>
 			<div class="w-2/3">
-			<img src="image.jpg" alt="Image" class="w-full">
+			<img src="Partagearbre.png" alt="Image" class="w-full">
 		  </div>
 		  
 		</div>
@@ -64,7 +64,7 @@
 	  <div class="bg-gray-200 py-8">
 		<div class="container mx-auto px-4 flex items-center">
 		  <div class="w-2/3">
-			<img src="image.jpg" alt="Image" class="w-full">
+			<img src="Propositionsprojets.png" alt="Image" class="w-full">
 		  </div>
 		  <div class="w-1/3 ml-4">
 			<h2 class="text-2xl font-bold mb-2">How to make carbon tax great again? </h2>
@@ -82,7 +82,7 @@
 				<a href="/bouton4" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Actualités</a>
 			  </div>
 			<div class="w-2/3">
-			<img src="image.jpg" alt="Image" class="w-full">
+			<img src="actualitesecologie.png" alt="Image" class="w-full">
 		  </div>
 		  
 		</div>
