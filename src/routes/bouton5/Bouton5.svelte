@@ -44,10 +44,10 @@
     });
 
 </script>
-<div class="page">
+<div class="absolute w-full top-40 page bg-gradient-to-r from-violet-200 ">
 
-    <h2>Contact Us</h2>
-    <p>Enter the details to get in touch with us. You can remove your email at any time after this.</p> <br/><br/>
+    <h2>Merci pour vos retours!</h2>
+    <p>Vous pouvez inscrire vos coordoonées et nous faire un retour sur votre expérience "Info taxecarbone"! Nous reviendrons vers vous très vite, merci!</p> <br/><br/>
 
     {#if apiResult != null}
 

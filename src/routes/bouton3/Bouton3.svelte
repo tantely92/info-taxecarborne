@@ -12,7 +12,7 @@
     }
   </script>
   
-  <main class="bg-blue-200 py-10">
+  <main class="absolute w-full top-40 bg-gradient-to-r from-orange-200 py-10">
     <div class="container mx-auto px-4">
       <div class="text-center">
         <h1 class="text-4xl font-bold mb-4">Maintenant, co-construisons!</h1>
@@ -21,22 +21,23 @@
       
       <div class="flex justify-center mt-10">
         <div class="w-1/3 px-4">
-          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
+          <button class="bg-orange-500 hover:bg-orange-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
             Les principaux axes de réflexion
           </button>
         </div>
         <div class="w-1/3 px-4">
-          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
+          <button class="bg-orange-500 hover:bg-orange-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
             Les pistes pour l'entreprise
           </button>
         </div>
         <div class="w-1/3 px-4">
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
+            <button class="bg-orange-500 hover:bg-orange-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
               ... vos pistes! 
             </button>
           </div>
         
       </div>
+      <img src="Propositionsprojets.png" alt="Image" class="w-full blur-sm ">
       {#if activeSection !== null}
       <div class="flex justify-center mt-4">
         <div class="w-full">
@@ -45,42 +46,42 @@
 
             <div class="flex justify-center mt-10">
                 <div class="w-1/3 px-4">
-                  <a href="#redistribution" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#redistribution" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                     redistribution
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#emploi et entreprise" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#emploi et entreprise" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                     emploi et entreprise
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#ISF climatique" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#ISF climatique" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                     ISF climatique
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#particularité des ménages" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#particularité des ménages" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                     particularité des ménages
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                    <a href="#flexibilité" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                    <a href="#flexibilité" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                         flexibilité
                     </a>
                   </div>
                   <div class="w-1/3 px-4">
-                    <a href="#prix du carbone" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                    <a href="#prix du carbone" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                         prix du carbone
                     </a>
                   </div>
                   <div class="w-1/3 px-4">
-                    <a href="#autres formes de tarification" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                    <a href="#autres formes de tarification" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                         autres formes de tarification
                     </a>
                   </div>
                   <div class="w-1/3 px-4">
-                    <a href="#méthane et kérozène" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                    <a href="#méthane et kérozène" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mb-4">
                         méthane et kérozène
                     </a>
                   </div>
@@ -292,9 +293,7 @@
   </main>
   
   <style>
-    button {
-      @apply bg-blue-600;
-    }
+   
     
     p {
       white-space: pre-line;

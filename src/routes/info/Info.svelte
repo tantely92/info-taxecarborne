@@ -10,24 +10,24 @@
   }
 </script>
 
-<main class="bg-blue-200 py-10">
-  <div class="container mx-auto px-4">
+<main class="bg-gradient-to-r from-blue-200 py-10">
+  <div class="absolute w-full top-40 container mx-auto px-4">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">Les principales informations</h1>
     </div>
     <div class="flex justify-center mt-10">
       <div class="w-1/3 px-4">
-        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
           Différents types de tarification carbone
         </button>
       </div>
       <div class="w-1/3 px-4">
-        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
           Historique récent en France
         </button>
       </div>
       <div class="w-1/3 px-4">
-        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
           Les principaux chiffres en France
         </button>
       </div>
@@ -297,9 +297,6 @@
 </main>
 
 <style>
-button {
-  @apply bg-blue-600;
-}
 
 p {
   white-space: pre-line;

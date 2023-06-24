@@ -8,3 +8,4 @@
 	<meta name="description" content="Information sur la taxe carbone" />
 </svelte:head>
 <Quizz/>
+<Info/>

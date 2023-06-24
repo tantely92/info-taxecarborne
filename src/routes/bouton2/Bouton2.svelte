@@ -12,7 +12,7 @@
     }
   </script>
   
-  <main class="bg-blue-200 py-10">
+  <main class="absolute w-full top-40 bg-gradient-to-r from-green-200 py-10">
     <div class="container mx-auto px-4">
       <div class="text-center">
         <h1 class="text-4xl font-bold mb-4">Inspirez vous...</h1>
@@ -21,31 +21,36 @@
       
       <div class="flex justify-center mt-10">
         <div class="w-1/3 px-4">
-          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
+          <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
             ...des économistes environnementaux
           </button>
         </div>
         <div class="w-1/3 px-4">
-          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
+          <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
             ...des économistes écologiques
           </button>
         </div>
         <div class="w-1/3 px-4">
-          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
+          <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
             ...du monde de l’entreprise
           </button>
         </div>
         <div class="w-1/3 px-4">
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(4)}>
+            <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(4)}>
                 ...de la sphère politique
             </button>
           </div>
           <div class="w-1/3 px-4">
-            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(5)}>
+            <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(5)}>
                 ... des ONG
             </button>
           </div>
+          
       </div>
+      <div class="blur-sm">
+        <img src="Partagearbre.png" alt="Image 1" class="w-full mr-4">
+      </div>
+
       {#if activeSection !== null}
       <div class="flex justify-center mt-4">
         <div class="w-full">
@@ -54,22 +59,22 @@
 
             <div class="flex justify-center mt-10">
                 <div class="w-1/3 px-4">
-                  <a href="#Jean-Charles Hourcade" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Jean-Charles Hourcade" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Jean-Charles Hourcade
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Jean Tirole" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Jean Tirole" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Jean Tirole
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Picketty" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Picketty" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Picketty
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Pindick" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Pindick" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Pindyck
                   </a>
                 </div>
@@ -154,12 +159,12 @@
 
             <div class="flex justify-center mt-10">
                 <div class="w-1/3 px-4">
-                  <a href="#Porcher" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Porcher" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Porcher
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Parrique" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Parrique" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Parrique
                   </a>
                 </div>
@@ -204,12 +209,12 @@
             {#if activeSection === 3}
             <div class="flex justify-center mt-10">
                 <div class="w-1/3 px-4">
-                  <a href="#Cabinets de conseil" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Cabinets de conseil" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Cabinets de conseil
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Chambre de commerce et d’industrie" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Chambre de commerce et d’industrie" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Chambre de commerce et d’industrie
                   </a>
                 </div>
@@ -259,17 +264,17 @@
             
             <div class="flex justify-center mt-10">
                 <div class="w-1/3 px-4">
-                  <a href="#MEDEF" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#MEDEF" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     MEDEF
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Syndicats des travailleurs" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Syndicats des travailleurs" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Syndicats des travailleurs
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Candidats à la présidentielle" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Candidats à la présidentielle" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Candidats à la présidentielle
                   </a>
                 </div>
@@ -374,32 +379,32 @@
             
             <div class="flex justify-center mt-10">
                 <div class="w-1/3 px-4">
-                  <a href="#Réseau climat France" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Réseau climat France" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Réseau climat France
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#OXFAM" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#OXFAM" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     OXFAM
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#ATTAC" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#ATTAC" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     ATTAC
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                  <a href="#Greenpeace" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <a href="#Greenpeace" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Greenpeace
                   </a>
                 </div>
                 <div class="w-1/3 px-4">
-                    <a href="#Fondation Nicolas Hulot" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                    <a href="#Fondation Nicolas Hulot" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                         Fondation Nicolas Hulot
                     </a>
                   </div>
                   <div class="w-1/3 px-4">
-                    <a href="#WWF" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                    <a href="#WWF" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                         WWF
                     </a>
                   </div>
@@ -520,11 +525,12 @@
   </main>
   
   <style>
-    button {
-      @apply bg-blue-600;
-    }
+    
     
     p {
       white-space: pre-line;
     }
+
+
+  
     </style>

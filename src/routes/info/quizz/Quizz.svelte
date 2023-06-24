@@ -26,11 +26,12 @@
     }
 </script>
 
-<div class="flex justify-center mt-4">
+<div class="absolute w-full top-40 flex justify-center  bg-gradient-to-r from-blue-200">
     <div>
-      <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => displayQuizz()}>
+      <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => displayQuizz()}>
         Testez d'abord vos connaissances! 
       </button>
+      <img src="Livrearbre.png" alt="Image" class="w-full blur-sm">
     </div>
 </div>
 
