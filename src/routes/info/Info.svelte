@@ -161,32 +161,17 @@
             </div>
             {/if}
             {#if activeSection === 2}
-            <div class="flex text-center mt-10">
-              <div class="w-1/3 px-4">
-                <a href="#Les débuts de la taxe carbone en France" class="hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  Les débuts de la taxe carbone en France 
-                </a>
-              </div>
-              <div class="w-1/3 px-4">
-                <a href="#L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes" class="hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes 
-                </a>
-              </div>
+            <div class=" flex text-center mt-10">
               
-              <div class="w-1/3 px-4">
-                <a href="#Vers une nouvelle taxe?" class="hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  Vers une nouvelle taxe ? 
-                </a>
-              </div>
               
             </div>
 
 
-              <div class="flex items-center">
-                <img src="ecotaxe.png" alt="Image 2" class="w-16 h-16 mr-4">
+              <div class="background6 flex items-center">
+                <img src="ecotaxe.png" alt="Image 2" class="w-1/2 mr-4 rounded-lg">
                 <div>
-                  <h2 id="Les débuts de la taxe carbone en France" class="text-xl font-bold mb-2">Les débuts de la taxe carbone en France </h2>
-                  <p class="text-gray-700 mb-4">La taxe carbone en France a été introduite lors du Grenelle de l'environnement en 2007, initialement destinée aux poids lourds pour financer l'entretien des infrastructures de transport et le développement des transports en commun. 
+                  <h2 id="Les débuts de la taxe carbone en France" class="text-3xl font-extrabold py-7 text-center mb-2">Les débuts de la taxe carbone en France </h2>
+                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">La taxe carbone en France a été introduite lors du Grenelle de l'environnement en 2007, initialement destinée aux poids lourds pour financer l'entretien des infrastructures de transport et le développement des transports en commun. 
 
                     La Loi de finances pour 2009 a établi cette taxe pour les poids lourds utilisant certaines infrastructures. 
                     
@@ -205,11 +190,10 @@
                     Le contrat avec Ecomouv a été résilié par l'État en octobre 2014, entraînant un coût final estimé à 957 millions d'euros pour l'État. </p>
                 </div>
               </div>
-              <div class="flex items-center">
-                <img src="gilletsjaunesmanif.png" alt="Image 2" class="w-16 h-16 mr-4">
+              <div class="background7 flex items-center">
                 <div>
-                  <h2 id="L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes" class="text-xl font-bold mb-2">L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes  </h2>
-                  <p class="text-gray-700 mb-4">La loi de finances 2014 a introduit une taxe carbone, s'appliquant à tous les secteurs économiques, pour aider la France à atteindre ses objectifs de réduction des émissions selon les Accords de Paris 2015. 
+                  <h2 id="L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes" class="text-3xl font-extrabold py-7 text-center mb-2 px-10">L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes  </h2>
+                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">La loi de finances 2014 a introduit une taxe carbone, s'appliquant à tous les secteurs économiques, pour aider la France à atteindre ses objectifs de réduction des émissions selon les Accords de Paris 2015. 
 
                     La taxe carbone, initialement à 7€ par tonne de CO2, a augmenté graduellement jusqu'à 30,5 €/tonne de CO2 en 2017. 
                     
@@ -223,12 +207,14 @@
                     
                     En juin 2020, la Convention a soumis 149 propositions, dont l'introduction d'une taxe carbone aux frontières de l'Union européenne pour limiter le réchauffement climatique. </p>
                 </div>
+                <img src="gilletsjaunesmanif.png" alt="Image 2" class="w-1/2 mr-4 rounded-lg">
+
               </div>
-              <div class="flex items-center">
-                <img src="Nouveautetaxe.png" alt="Image 2" class="w-16 h-16 mr-4">
+              <div class="background8 flex items-center">
+                <img src="Nouveautetaxe.png" alt="Image 2" class="w-1/2 mr-4 rounded-lg">
                 <div>
-                  <h2 id="Vers une nouvelle taxe?" class="text-xl font-bold mb-2">Vers une nouvelle taxe ?</h2>
-                  <p class="text-gray-700 mb-4">En avril 2021, l'UE s'accorde sur un objectif de réduction des émissions de gaz à effet de serre de 55 % d'ici 2030 et la neutralité carbone d'ici 2050, fixés dans le paquet climatique "Fit for 55 by 2030". 
+                  <h2 id="Vers une nouvelle taxe?" class="text-3xl font-extrabold py-7 text-center mb-2">Vers une nouvelle taxe ?</h2>
+                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">En avril 2021, l'UE s'accorde sur un objectif de réduction des émissions de gaz à effet de serre de 55 % d'ici 2030 et la neutralité carbone d'ici 2050, fixés dans le paquet climatique "Fit for 55 by 2030". 
 
                     En juillet 2021, la Commission européenne présente un mécanisme d'ajustement carbone aux frontières de l'UE, introduisant une taxe carbone sur les importations. 
                     
@@ -243,11 +229,11 @@
               </div>
             {/if}
             {#if activeSection === 3}
-              <div class="flex items-center">
-                <img src="chiffrestaxe.png" alt="Image 3" class="w-16 h-16 mr-4">
+              <div class="background9 flex items-center">
+                <img src="chiffrestaxe.png" alt="Image 3" class="w-1/2 mr-4 rounded-lg">
                 <div>
-                  <h2 class="text-xl font-bold mb-2">Chiffres sur la taxe carbone </h2>
-                  <p class="text-gray-700 mb-4">Plus de la moitié du prix de l'essence en France (55,6 % pour le diesel, 58,2 % pour l'essence sans plomb 95) est constituée de taxes (analyse de l'UFIP, octobre 2021). 
+                  <h2 class="text-3xl font-extrabold py-7 text-center mb-2">Chiffres sur la taxe carbone </h2>
+                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">Plus de la moitié du prix de l'essence en France (55,6 % pour le diesel, 58,2 % pour l'essence sans plomb 95) est constituée de taxes (analyse de l'UFIP, octobre 2021). 
 
                     La principale charge fiscale est la TICPE (Taxe Intérieure de Consommation sur les Produits Énergétiques), appelée "taxe carbone", représentant environ 40% du prix à la pompe. 
                     
@@ -309,5 +295,35 @@ p {
     background-size: cover;
     background-position: center;
   }
+
+  .background6 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('ecotaxe.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background7 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('gilletsjaunesmanif.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background8 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Nouveautetaxe.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background9 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('chiffrestaxe.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  
+  
+  
+  
+
 
 </style>
