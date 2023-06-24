@@ -26,7 +26,7 @@
       const questionsList = data.map((question) => ({
         id: question.id,
         question: question.text,
-        answer: '' // Remplacez cette valeur par la logique d'obtention de la réponse correspondante
+        answer: null // Remplacez cette valeur par la logique d'obtention de la réponse correspondante
       }));
 
       return questionsList;
@@ -80,9 +80,13 @@
         JE NE SAIS PAS
       </label>
     </div>
-    <button on:click={nextQuestion}>Suivant</button>
+    <button on:click={nextQuestion} disabled={questions[currentQuestion].answer === null}>
+      Suivant
+    </button>
   {:else}
     <p>Toutes les questions ont été répondues.</p>
-    <button on:click={submitAnswers}>Soumettre les réponses</button>
+    <button on:click={submitAnswers} disabled={questions.some(question => question.answer === null)}>
+      Soumettre les réponses
+    </button>
   {/if}
 </main>
