@@ -5,25 +5,35 @@
   import { createForm } from "svelte-forms-lib";
   import * as yup from "yup";
 
-  import { TextInput, TextArea, Button, FormGroup, Form, InlineNotification } from "carbon-components-svelte";
+  import { TextInput, TextArea, Button, FormGroup, Form, InlineNotification, Slider } from "carbon-components-svelte";
 
   const validationSchema = yup.object().shape({
-      sliderValue: yup.number().min(0).max(10).required('Curseur 1'),
+      socialFair: yup.number().min(0).max(10).required(),
+      ecoFair: yup.number().min(0).max(10).required(),
+      pricing: yup.number().min(0).max(10).required(),
+      suggestion: yup.string().required('Votre avis est important')
   });
 
-  
-  let { form, errors, handleSubmit } = createForm({
-    initialValues: { sliderValue: 10 },
+  let apiResult = null;
+
+  const { form, errors, handleChange, handleSubmit, isSubmitting, handleReset } = createForm({
+    initialValues: { socialFair: 10, ecoFair: 10, pricing: 10, suggestion: "" },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
-      console.log(values);
-      // Envoyer les données ou effectuer d'autres actions
-    },
-  });
+    onSubmit: async values => {
 
-  function handleChange(value){
-    console.log("value ",value)
-  }
+      try {
+          var result = await supabase.from("avis").insert(values);
+          if (result.status === 201) {
+              apiResult = true;
+          } else {
+              apiResult = false;
+          }
+
+      } catch (ex) {
+          apiResult = false;
+      }
+    }
+  });
 
 
     /**
@@ -312,18 +322,54 @@
               </div>
             {/if}
             {#if activeSection === 3}
+            <div class="">
+              <p>On veut savoir!</p> <br/><br/>
 
-            <form on:submit="{handleSubmit}">
-              <div class='flex flex-col w-1/4'>
-                <label for="sliderValue">Valeur du curseur :</label>
-                <input type="range" on:change="{() =>{handleChange(form.sliderValue)}}" bind:value="{form.sliderValue}" id="sliderValue" min="0" max="10" step="1" />
-                {#if errors.sliderValue}
-                <p class="error">{errors.sliderValue}</p>
+                {#if apiResult != null}
+
+                    {#if apiResult === true}
+                    <InlineNotification
+                        lowContrast
+                        kind="success"
+                        title="Success:"
+                        subtitle="Your message has been received"
+                    />
+                    {:else}
+                    <InlineNotification lowContrast kind="error"
+                        title="Error:"
+                        subtitle="An internal server error occurred."
+                    />
+
+                    {/if}    
                 {/if}
-              </div>
+              <Form on:submit={handleSubmit}>
+                <FormGroup>
+                  <Slider labelText="Pensez-vous que cette taxe carbone soit juste socialement parlant ?" 
+                        id="socialFair" bind:value={$form.socialFair} 
+                        min={0} max={10} step={1} aria-label="Curseur avis social" />
+                </FormGroup>
+                <FormGroup>
+                  <Slider labelText="Pensez-vous que cette taxe carbone soit juste écologiquement parlant ?" 
+                        id="ecoFair" bind:value={$form.ecoFair} 
+                        min={0} max={10} step={1} aria-label="Curseur avis ecologique" />
+                </FormGroup>
+                <FormGroup>
+                  <Slider labelText="Que pensez-vous du prix de cette taxe ? (0 : Trop cher, 10 : Pas cher)" 
+                        id="pricing" bind:value={$form.pricing} 
+                        min={0} max={10} step={1} aria-label="Curseur avis prix" />
+                </FormGroup>
+                <FormGroup>
+                  <TextArea labelText="Quelles seraient vos suggestions ?" name="suggestion" bind:value={$form.suggestion}
+                  placeholder="Ecrivez ici..." invalid={$errors.suggestion.length > 0} invalidText={$errors.suggestion}
+                  maxCount={100}/>
+                </FormGroup>
+
+                <Button type="submit" disabled={$isSubmitting}>Soumettre mon avis</Button>
+                
+              </Form>
+            </div>  
+
             
-              <button type="submit">Soumettre</button>
-            </form>
             
             <style>
               .error {

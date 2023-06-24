@@ -23,7 +23,6 @@
         onSubmit: async values => {
 
             try {
-                console.log(values)
                 var result = await supabase.from("contact").insert(values);
                 if (result.status === 201) {
                     apiResult = true;
@@ -44,7 +43,7 @@
 <div class="absolute w-full top-40 page bg-gradient-to-r from-violet-200 ">
 
     <h2>Merci pour vos retours!</h2>
-    <p>Vous pouvez inscrire vos coordoonées et nous faire un retour sur votre expérience "Info taxecarbone"! Nous reviendrons vers vous très vite, merci!</p> <br/><br/>
+    <p>Vous pouvez inscrire vos coordonnées et nous faire un retour sur votre expérience "Info taxecarbone"! Nous reviendrons vers vous très vite, merci!</p> <br/><br/>
 
     {#if apiResult != null}
 
