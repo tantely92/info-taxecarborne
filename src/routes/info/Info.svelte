@@ -4,12 +4,9 @@
   import Quizz from '../quizz/Quizz.svelte'; // Remplacez 'TestComponent' par le nom de votre composant Svelte
 
   let activeSection = null;
-  let activeQuizz = false;
+  let resultat = null;
   function toggleSection(section) {
     activeSection = section === activeSection ? null : section;
-  }
-  function displayQuizz(){
-    activeQuizz = true
   }
 </script>
 
@@ -17,13 +14,6 @@
   <div class="container mx-auto px-4">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">Les principales informations</h1>
-    </div>
-    <div class="flex justify-center mt-4">
-      <div>
-        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => displayQuizz()}>
-          Testez d'abord vos connaissances! 
-        </button>
-      </div>
     </div>
     <div class="flex justify-center mt-10">
       <div class="w-1/3 px-4">
@@ -70,7 +60,7 @@
               </div>
               <div class="w-1/3 px-4">
                 <a href="#LA Taxe carbone" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
-                  LA Taxe carbone
+                  La Taxe carbone
                 </a>
               </div>
               
@@ -302,12 +292,6 @@
           </div>
         </div>
       </div>
-    {/if}
-  </div>
-  <div >
-    
-    {#if activeQuizz === true}
-      <Quizz /> <!-- Remplacez 'TestComponent' par le nom de votre composant Svelte -->
     {/if}
   </div>
 </main>
