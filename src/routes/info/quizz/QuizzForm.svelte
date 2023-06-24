@@ -104,7 +104,15 @@
   
   <main>
     {#if currentQuestion < questions.length}
-      <h2>{questions[currentQuestion].question}</h2>
+
+    <div class="w-1/3 px-4">
+      <div class="bg-white rounded-lg shadow-md p-6 w-full h-auto">
+      <h2 class="text-xl font-bold mb-2">{questions[currentQuestion].question}  </h2>
+      <p class="text-gray-700 mb-4">Ecotaxe, gilets jaunes, marché carbone... Un point sur la fiscalité carbone! <br> Testez vos connaissances sur le sujet! </p>
+      <a href="/info" class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">S'informer</a>
+      </div>
+    </div>
+
       <div>
         <label>
           <input type="radio" bind:group={questions[currentQuestion].userAnswer} value="true" />

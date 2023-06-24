@@ -3,7 +3,7 @@
   let showDropdown_inspi = false;
   let showDropdown_agir = false;
 </script>
-<div class="fixed top-0 w-full z-10 h-40 h-1/2 bg-cover bg-repeat self-auto flex items-center border-double border-4 border-green-600 outline outline-offset-2 outline-2" style="background-image: url('fondaquarelle.jpg');">
+<div class="fixed top-0 w-full z-10 h-40 bg-cover bg-repeat self-auto flex items-center border-double border-4 border-green-600 outline outline-offset-2 outline-2" style="background-image: url('fondaquarelle.jpg');">
   <div class="container mx-auto px-4 flex items-center justify-center placeholder:">
     <div>
       <a href="/" >
@@ -86,4 +86,7 @@
   .fade-in {
     animation: fadeIn .5s ease-in-out;
   }
+
+
+
 </style>

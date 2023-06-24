@@ -10,11 +10,11 @@
   }
 </script>
 
-<main class="bg-gradient-to-r from-blue-200 py-10">
-  <div class="absolute w-full top-96 container mx-auto">
-    <div class="bg-gradient-to-r from-blue-200 fixed w-full top-40 py-14 z-20">
+<main class="bg-gradient-to-r from-blue-200">
+  <div class="absolute w-full top-96  mx-auto">
+    <div class="bg-gradient-to-r from-blue-200 fixed w-full top-40 py-10 z-20">
     <div class="text-center">
-      <h1 class="text-4xl font-bold mb-4">Les principales informations</h1>
+      <h1 class="text-4xl font-bold">Les principales informations</h1>
     </div>
     <div class="flex justify-items-center mt-10">
       <div class="w-2/3 px-4">
@@ -35,45 +35,18 @@
     </div>
     </div>
     {#if activeSection !== null}
-      <div class="flex justify-center mt-4">
+      <div class="">
         <div class="w-full">
-          <div class=" bg-white rounded-lg shadow-md p-6">
+          <div class="w-full absolute top-5 bg-white rounded-lg shadow-md">
             {#if activeSection === 1}
-            <div class="flex text-center mt-10">
-              <div class="w-1/3 px-4">
-                <a href="#introduction"  class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  Introduction
-                </a>
-              </div>
-              <div class="w-1/3 px-4">
-                <a href="#Marché de quotas carbone entre entreprises cotées" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  Marché de quotas carbone entre entreprises cotées
-                </a>
-              </div>
-              <div class="w-1/3 px-4">
-                <a href="#Taxe aux frontières Européennes pour les entreprises" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  Taxe aux frontières Européennes pour les entreprises
-                </a>
-              </div>
-              <div class="w-1/3 px-4">
-                <a href="#Prix du carbone en interne pour les entreprises" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  Prix du carbone en interne pour les entreprises
-                </a>
-              </div>
-              <div class="w-1/3 px-4">
-                <a href="#LA Taxe carbone" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
-                  La Taxe carbone
-                </a>
-              </div>
-              
-            </div>
+            
+            <div class="">
+              <div class= "background1 flex items-center">
 
-              <div class="flex items-center">
-
-                <img src="Mondecarbone.png" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Mondecarbone.png" alt="Image 1" class="w-1/2 rounded-lg mr-4">
                 <div>
-                  <h2 id="Introduction" class="text-xl font-bold mb-2">Introduction </h2>
-                  <p class="text-gray-700 mb-4">Chiffres et panorama global de la tarification carbone 
+                  <h2 id="Introduction" class="text-3xl font-extrabold py-7 text-center mb-2">Introduction </h2>
+                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">Chiffres et panorama global de la tarification carbone 
 
                     64 initiatives mondiales pour la tarification du carbone, couvrant 22% des émissions de GES. 
                     
@@ -96,12 +69,12 @@
                     Union européenne: système d'échange de quotas d'émission et taxe aux frontières pour les entreprises. </p>
                 </div>
               </div>
-              <div class="flex items-center">
+              <div class="background2 flex items-center">
 
-                <img src="Marchecarbone.png" alt="Image 1" class="w-16 h-16 mr-4">
+                
                 <div>
-                  <h2 id="Marché de quotas carbone entre entreprises cotées"  class="text-xl font-bold mb-2">Marché de quotas carbone entre entreprises cotées </h2>
-                  <p class="text-gray-700 mb-4">Marché du carbone: régule les émissions de CO2 en attribuant des quotas aux entreprises. 
+                  <h2 id="Marché de quotas carbone entre entreprises cotées"  class="text-3xl font-extrabold py-7 text-center mb-2">Marché de quotas carbone entre entreprises cotées </h2>
+                  <p class="text-gray-900 text-justify ml-4 mr-4 mb-4">Marché du carbone: régule les émissions de CO2 en attribuant des quotas aux entreprises. 
 
                     Les entreprises qui émettent des GES se voient allouer un certain nombre de quotas gratuits pour chaque tonne d'émission autorisée. Si l’entreprise émet plus que son allocation initiale, elle doit acheter des quotas supplémentaires sur le marché. En revanche, si elle émet moins que son allocation, elle peut vendre ses quotas inutilisés.  
                     
@@ -116,13 +89,14 @@
                     
                     Phase 4 (2021-présent): vise des objectifs de réduction des émissions plus ambitieux. </p>
                 </div>
+                <img src="Marchecarbone.png" alt="Image 1" class="w-1/2 h-full rounded-lg">
               </div>
-              <div class="flex items-center">
+              <div class="background3 flex items-center">
 
-                <img src="Unioneuropenneecologie.png" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Unioneuropenneecologie.png" alt="Image 1" class="w-1/2 rounded-lg mr-4">
                 <div>
-                  <h2 id="Taxe aux frontières Européennes pour les entreprises" class="text-xl font-bold mb-2">Taxe aux frontières Européennes pour les entreprises</h2>
-                  <p class="text-gray-700 mb-4">"Mécanisme d'Ajustement Carbone aux Frontières" (MACF) : taxe carbone de l'UE sur certaines importations hors UE. 
+                  <h2 id="Taxe aux frontières Européennes pour les entreprises" class="text-3xl font-extrabold py-7 text-center mb-2">Taxe aux frontières Européennes pour les entreprises</h2>
+                  <p class="text-gray-900 text-justify mr-4 mb-4">"Mécanisme d'Ajustement Carbone aux Frontières" (MACF) : taxe carbone de l'UE sur certaines importations hors UE. 
 
                     Objectif : protéger les entreprises européennes contre la concurrence déloyale, éviter le transfert d'émissions de carbone vers des pays aux normes environnementales plus laxistes. 
                     
@@ -137,12 +111,12 @@
                     L'UE vise une tarification uniforme du carbone à l'échelle mondiale, encourageant la réduction des émissions et des pratiques durables. </p>
                 </div>
               </div>
-              <div class="flex items-center">
+              <div class="background4 flex items-center">
 
-                <img src="Prixducarboneinterne.png" alt="Image 1" class="w-16 h-16 mr-4">
+                
                 <div>
-                  <h2 id="Prix du carbone en interne pour les entreprises" class="text-xl font-bold mb-2">Prix du carbone en interne pour les entreprises</h2>
-                  <p class="text-gray-700 mb-4">Le prix du carbone en interne est une estimation du coût des émissions de CO2 d'une entreprise. 
+                  <h2 id="Prix du carbone en interne pour les entreprises" class="text-3xl font-extrabold py-7 text-center mb-2">Prix du carbone en interne pour les entreprises</h2>
+                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">Le prix du carbone en interne est une estimation du coût des émissions de CO2 d'une entreprise. 
 
                     Méthode d'inclusion des coûts environnementaux dans la comptabilité et les décisions d'investissement. 
                     
@@ -160,13 +134,14 @@
                     
                     Outil clé pour intégrer les coûts environnementaux dans la prise de décision et encourager des comportements plus durables. </p>
                 </div>
+                <img src="Prixducarboneinterne.png" alt="Image 1" class="w-1/2 h-full rounded-lg">
               </div>
-              <div class="flex items-center">
+              <div class="background5 flex items-center">
 
-                <img src="Taxecarbone.png" alt="Image 1" class="w-16 h-16 mr-4">
+                <img src="Taxecarbone.png" alt="Image 1" class="w-1/2 mr-4 rounded-lg">
                 <div>
-                  <h2 id="LA Taxe carbone" class="text-xl font-bold mb-2">LA Taxe carbone</h2>
-                  <p class="text-gray-700 mb-4">"CCE" et "TICPE" sont deux taxes sur les produits énergétiques en France. 
+                  <h2 id="LA Taxe carbone" class="text-3xl font-extrabold py-7 text-center mb-2">LA Taxe carbone</h2>
+                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">"CCE" et "TICPE" sont deux taxes sur les produits énergétiques en France. 
 
                     "CCE", ou "Contribution Climat Énergie”, est une taxe carbone; "TICPE", ou "Taxe Intérieure de Consommation sur les Produits Énergétiques", est plus large, couvrant tous les produits énergétiques. 
                     
@@ -183,22 +158,23 @@
                     La taxe carbone s'applique aussi à des secteurs non couverts par la TICPE, comme l'aviation et le transport maritime. Ces secteurs ont mis en place des systèmes de compensation volontaire pour réduire leur empreinte carbone. </p>
                 </div>
               </div>
+            </div>
             {/if}
             {#if activeSection === 2}
-            <div class="flex justify-center mt-10">
+            <div class="flex text-center mt-10">
               <div class="w-1/3 px-4">
-                <a href="#Les débuts de la taxe carbone en France" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#Les débuts de la taxe carbone en France" class="hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   Les débuts de la taxe carbone en France 
                 </a>
               </div>
               <div class="w-1/3 px-4">
-                <a href="#L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes" class="hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes 
                 </a>
               </div>
               
               <div class="w-1/3 px-4">
-                <a href="#Vers une nouvelle taxe?" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#Vers une nouvelle taxe?" class="hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   Vers une nouvelle taxe ? 
                 </a>
               </div>
@@ -303,4 +279,35 @@
 p {
   white-space: pre-line;
 }
+
+.background1 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Mondecarbone.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background2 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Marchecarbone.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background3 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Unioneuropenneecologie.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background4 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Prixducarboneinterne.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background5 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Taxecarbone.png');
+    background-size: cover;
+    background-position: center;
+  }
+
 </style>

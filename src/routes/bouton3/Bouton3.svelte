@@ -43,7 +43,7 @@
     }
   </script>
   
-  <main class="absolute w-full top-40 bg-gradient-to-r from-orange-200 py-10">
+  <main class="absolute h-screen top-40 bg-gradient-to-r from-orange-200 py-10">
     <div class="container mx-auto px-4">
       <div class="text-center">
         <h1 class="text-4xl font-bold mb-4">Maintenant, co-construisons!</h1>
@@ -68,7 +68,7 @@
           </div>
         
       </div>
-      <img id="imageToFade" src="Propositionsprojets.png" alt="Image" class="w-full blur-sm ">
+      <img id="imageToFade" src="Propositionsprojets.png" alt="Image" class="w-1/3 blur-sm ">
       {#if activeSection !== null}
       <div class="flex justify-center mt-4">
         <div class="w-full">

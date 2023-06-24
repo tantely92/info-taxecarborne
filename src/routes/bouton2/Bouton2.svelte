@@ -16,7 +16,7 @@
     }
   </script>
   
-  <main class="absolute w-full top-40 bg-gradient-to-r from-green-200 py-10">
+  <main class="w-full h-screen overflow-y-auto mt-40  bg-gradient-to-r from-green-200 py-10">
     <div class="container mx-auto px-4">
       <div class="text-center">
         <h1 class="text-4xl font-bold mb-4">Inspirez vous...</h1>
@@ -52,7 +52,7 @@
           
       </div>
       <div class="blur-sm">
-        <img id="imageToFade" src="Partagearbre.png" alt="Image 1" class="w-full mr-4">
+        <img id="imageToFade" src="Partagearbre.png" alt="Image 1" class="w-1/3  mr-4">
       </div>
 
       {#if activeSection !== null}
