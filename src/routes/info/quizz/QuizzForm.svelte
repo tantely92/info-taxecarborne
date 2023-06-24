@@ -2,7 +2,8 @@
     import { createEventDispatcher } from 'svelte';
     import { supabase } from '../../../supabaseClient';
     import { onMount } from 'svelte';
-  
+    import { fade } from 'svelte/transition';
+
     // Liste des questions et réponses
     let questions = [];
     
@@ -105,19 +106,28 @@
       resetAnswers();
     }
   </script>
-  
-  <main>
-    {#if currentQuestion < questions.length}
 
-
-      <div class='w-auto px-4'>
-        <div class="bg-white rounded-lg shadow-md p-6 w-full h-auto">
-            <h2 class="text-xl font-bold mb-2">{questions[currentQuestion].question}  </h2>
-            <a href="#" on:click={() => { nextQuestion('true')} } class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">VRAI</a>
-            <a href="#" on:click={() => { nextQuestion('false')} } class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">FAUX</a>
-            <a href="#" on:click={() => { nextQuestion('unknown')} } class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">JE NE SAIS PAS</a>
-        </div>
+<main class='flex items-center justify-center h-screen pt-10 pb-10 background10'>
+  {#if currentQuestion < questions.length}
+  <div class="flex flex-col justify-between bg-white rounded-lg shadow-md p-6 w-96 h-96">
+      <div transition:fade>
+          <h2 class="text-xl font-bold mb-2">{questions[currentQuestion].question}</h2>
       </div>
-    {/if}
-  </main>
-  
+      <div class="relative inset-x-0 bottom-0 h-auto">
+          <a href="#" on:click={() => { nextQuestion('true')} } class="text-lg bg-blue-100  hover:bg-green-600 text-gray-700 font-bold py-2 px-4 rounded block text-center">VRAI</a>
+          <a href="#" on:click={() => { nextQuestion('false')} } class="text-lg bg-blue-100  hover:bg-red-600 text-gray-700 font-bold py-2 px-4 rounded block text-center">FAUX</a>
+          <a href="#" on:click={() => { nextQuestion('unknown')} } class="text-lg bg-blue-100  hover:bg-blue-600 text-gray-300 font-bold py-2 px-4 rounded block text-center">JE NE SAIS PAS</a>
+      </div>
+  </div>
+  {/if}
+</main>
+
+
+<style>
+.background10 {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Livrearbre.png');
+  background-size: cover;
+  background-position: center;
+}
+
+</style>

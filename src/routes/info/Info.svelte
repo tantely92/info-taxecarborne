@@ -12,7 +12,7 @@
 
 <main class="bg-gradient-to-r from-blue-200">
   <div class="absolute w-full top-96  mx-auto">
-    <div class="bg-gradient-to-r from-blue-200 fixed w-full top-40 py-10 z-20">
+    <div class="bg-gradient-to-r from-blue-200 fixed w-full top-40 py-10 z-10">
     <div class="text-center">
       <h1 class="text-4xl font-bold">Les principales informations</h1>
     </div>
