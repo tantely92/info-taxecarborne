@@ -25,12 +25,9 @@
             try {
                 console.log(values)
                 var result = await supabase.from("contact").insert(values);
-
-                if (result.data != null) {
-                    console.log(result.data)
+                if (result.status === 201) {
                     apiResult = true;
                 } else {
-                    console.log(values)
                     apiResult = false;
                 }
 
@@ -39,7 +36,7 @@
                 apiResult = false;
             }
 
-            handleReset();
+            //handleReset();
       }
     });
 
@@ -51,7 +48,7 @@
 
     {#if apiResult != null}
 
-        {#if apiResult == true}
+        {#if apiResult === true}
         <InlineNotification
             lowContrast
             kind="success"

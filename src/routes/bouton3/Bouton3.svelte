@@ -1,4 +1,31 @@
 <script>
+
+  import { supabase } from "../../supabaseClient";
+
+  import { createForm } from "svelte-forms-lib";
+  import * as yup from "yup";
+
+  import { TextInput, TextArea, Button, FormGroup, Form, InlineNotification } from "carbon-components-svelte";
+
+  const validationSchema = yup.object().shape({
+      sliderValue: yup.number().min(0).max(10).required('Curseur 1'),
+  });
+
+  
+  let { form, errors, handleSubmit } = createForm({
+    initialValues: { sliderValue: 10 },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      console.log(values);
+      // Envoyer les données ou effectuer d'autres actions
+    },
+  });
+
+  function handleChange(value){
+    console.log("value ",value)
+  }
+
+
     /**
    * @type {number | null}
    */
@@ -285,6 +312,24 @@
               </div>
             {/if}
             {#if activeSection === 3}
+
+            <form on:submit="{handleSubmit}">
+              <div class='flex flex-col w-1/4'>
+                <label for="sliderValue">Valeur du curseur :</label>
+                <input type="range" on:change="{() =>{handleChange(form.sliderValue)}}" bind:value="{form.sliderValue}" id="sliderValue" min="0" max="10" step="1" />
+                {#if errors.sliderValue}
+                <p class="error">{errors.sliderValue}</p>
+                {/if}
+              </div>
+            
+              <button type="submit">Soumettre</button>
+            </form>
+            
+            <style>
+              .error {
+                color: red;
+              }
+            </style>
            
             {/if}
           </div>
@@ -302,4 +347,7 @@
     p {
       white-space: pre-line;
     }
+  .bx--form-requirement {
+    color: red;
+  }
     </style>

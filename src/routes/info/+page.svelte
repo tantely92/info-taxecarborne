@@ -1,4 +1,4 @@
-<script prerender: false>
+<script>
     import Info from "./Info.svelte";
 	import Quizz from "./quizz/Quizz.svelte";
 
@@ -52,5 +52,5 @@
 	{#if displayComponent === "infos"}
 		<Info/>
 	{/if}
+	
 </div>
-<Info/>
