@@ -36,9 +36,13 @@
     let currentQuestion = 0; // Index de la question actuelle
     let score = 0;
     // Fonction pour passer à la question suivante
-    function nextQuestion() {
+    function nextQuestion(answer) {
+      questions[currentQuestion].userAnswer = answer
       saveAnswer();
       currentQuestion += 1;
+      if ( currentQuestion >= questions.length ){
+        submitAnswers();
+      }
     }
   
     // Fonction pour sauvegarder la réponse
@@ -105,36 +109,15 @@
   <main>
     {#if currentQuestion < questions.length}
 
-    <div class="w-1/3 px-4">
-      <div class="bg-white rounded-lg shadow-md p-6 w-full h-auto">
-      <h2 class="text-xl font-bold mb-2">{questions[currentQuestion].question}  </h2>
-      <p class="text-gray-700 mb-4">Ecotaxe, gilets jaunes, marché carbone... Un point sur la fiscalité carbone! <br> Testez vos connaissances sur le sujet! </p>
-      <a href="/info" class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">S'informer</a>
-      </div>
-    </div>
 
-      <div>
-        <label>
-          <input type="radio" bind:group={questions[currentQuestion].userAnswer} value="true" />
-          VRAI
-        </label>
-        <label>
-          <input type="radio" bind:group={questions[currentQuestion].userAnswer} value="false" />
-          FAUX
-        </label>
-        <label>
-          <input type="radio" bind:group={questions[currentQuestion].userAnswer} value="unknown" />
-          JE NE SAIS PAS
-        </label>
+      <div class='w-auto px-4'>
+        <div class="bg-white rounded-lg shadow-md p-6 w-full h-auto">
+            <h2 class="text-xl font-bold mb-2">{questions[currentQuestion].question}  </h2>
+            <a href="#" on:click={() => { nextQuestion('true')} } class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">VRAI</a>
+            <a href="#" on:click={() => { nextQuestion('false')} } class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">FAUX</a>
+            <a href="#" on:click={() => { nextQuestion('unknown')} } class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">JE NE SAIS PAS</a>
+        </div>
       </div>
-      <button on:click={nextQuestion} disabled={questions[currentQuestion].userAnswer === null}>
-        Suivant
-      </button>
-    {:else}
-      <p>Toutes les questions ont été répondues.</p>
-      <button on:click={submitAnswers} disabled={questions.some(question => question.userAnswer === null)}>
-        Soumettre les réponses
-      </button>
     {/if}
   </main>
   
