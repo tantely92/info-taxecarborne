@@ -9,6 +9,10 @@
    */
     function toggleSection(section) {
       activeSection = section === activeSection ? null : section;
+      let image = document.getElementById("imageToFade");
+    if (image) {
+      image.remove();
+    }
     }
   </script>
   
@@ -37,7 +41,7 @@
           </div>
         
       </div>
-      <img src="Propositionsprojets.png" alt="Image" class="w-full blur-sm ">
+      <img id="imageToFade" src="Propositionsprojets.png" alt="Image" class="w-full blur-sm ">
       {#if activeSection !== null}
       <div class="flex justify-center mt-4">
         <div class="w-full">

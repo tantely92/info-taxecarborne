@@ -11,17 +11,18 @@
 </script>
 
 <main class="bg-gradient-to-r from-blue-200 py-10">
-  <div class="absolute w-full top-40 container mx-auto px-4">
+  <div class="absolute w-full top-96 container mx-auto">
+    <div class="bg-gradient-to-r from-blue-200 fixed w-full top-40 py-14 z-20">
     <div class="text-center">
       <h1 class="text-4xl font-bold mb-4">Les principales informations</h1>
     </div>
-    <div class="flex justify-center mt-10">
-      <div class="w-1/3 px-4">
+    <div class="flex justify-items-center mt-10">
+      <div class="w-2/3 px-4">
         <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
           Différents types de tarification carbone
         </button>
       </div>
-      <div class="w-1/3 px-4">
+      <div class="w-2/3 px-4">
         <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
           Historique récent en France
         </button>
@@ -32,34 +33,35 @@
         </button>
       </div>
     </div>
-    {#if activeSection !== 0}
+    </div>
+    {#if activeSection !== null}
       <div class="flex justify-center mt-4">
         <div class="w-full">
-          <div class="bg-white rounded-lg shadow-md p-6">
+          <div class=" bg-white rounded-lg shadow-md p-6">
             {#if activeSection === 1}
-            <div class="flex justify-center mt-10">
+            <div class="flex text-center mt-10">
               <div class="w-1/3 px-4">
-                <a href="#introduction"  class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#introduction"  class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   Introduction
                 </a>
               </div>
               <div class="w-1/3 px-4">
-                <a href="#Marché de quotas carbone entre entreprises cotées" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#Marché de quotas carbone entre entreprises cotées" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   Marché de quotas carbone entre entreprises cotées
                 </a>
               </div>
               <div class="w-1/3 px-4">
-                <a href="#Taxe aux frontières Européennes pour les entreprises" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#Taxe aux frontières Européennes pour les entreprises" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   Taxe aux frontières Européennes pour les entreprises
                 </a>
               </div>
               <div class="w-1/3 px-4">
-                <a href="#Prix du carbone en interne pour les entreprises" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#Prix du carbone en interne pour les entreprises" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   Prix du carbone en interne pour les entreprises
                 </a>
               </div>
               <div class="w-1/3 px-4">
-                <a href="#LA Taxe carbone" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <a href="#LA Taxe carbone" class=" hover:text-blue-600 text-gray-600 font-bold py-2 px-4 rounded mb-4">
                   La Taxe carbone
                 </a>
               </div>

@@ -9,6 +9,10 @@
    */
     function toggleSection(section) {
       activeSection = section === activeSection ? null : section;
+      let image = document.getElementById("imageToFade");
+    if (image) {
+      image.remove();
+    }
     }
   </script>
   
@@ -48,7 +52,7 @@
           
       </div>
       <div class="blur-sm">
-        <img src="Partagearbre.png" alt="Image 1" class="w-full mr-4">
+        <img id="imageToFade" src="Partagearbre.png" alt="Image 1" class="w-full mr-4">
       </div>
 
       {#if activeSection !== null}

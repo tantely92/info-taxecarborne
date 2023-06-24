@@ -53,3 +53,4 @@
 		<Info/>
 	{/if}
 </div>
+<Info/>
