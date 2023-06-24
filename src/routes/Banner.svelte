@@ -3,16 +3,16 @@
   let showDropdown_inspi = false;
   let showDropdown_agir = false;
 </script>
-<div class="bg-gray-200 py-4">
+<div class="h-1/2 bg-cover bg-center" style="background-image: url('fondaquarelle.jpg');">
   <div class="container mx-auto px-4 flex items-center justify-between">
     <div>
-      <a href="/">
-        <img  src="logo2.png" alt="Logo" class="h-23 ">
+      <a href="/" >
+        <img  src="logo2.png" alt="Logo" class="w-28 h-28 rounded-full border-2 border-blue-500 overflow-hidden" >
       </a>
     </div>
-    <div class="flex items-center">
+    <div class="container mx-auto px-4 flex items-center justify-center">
       <div class="relative inline-block" on:mouseenter="{() => showDropdown_info = true}" on:mouseleave="{() => showDropdown_info = false}">
-        <a href="/info" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1"
+        <a href="/info" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full mx-4 flex items-center justify-center w-24 h-24 shadow-2xl transform hover:scale-105 transition-transform duration-200"
            >
           S'informer
         </a>
@@ -28,7 +28,7 @@
       </div>
       
       <div class="relative inline-block" on:mouseenter="{() => showDropdown_inspi = true}" on:mouseleave="{() => showDropdown_inspi = false}">
-        <a href="/bouton2" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1"
+        <a href="/bouton2" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold rounded-full mx-4 flex items-center justify-center w-24 h-24 shadow-2xl transform hover:scale-105 transition-transform duration-200"
            >
           S'inspirer
         </a>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="relative inline-block" on:mouseenter="{() => showDropdown_agir = true}" on:mouseleave="{() => showDropdown_agir = false}">
-        <a href="/bouton3" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1"
+        <a href="/bouton3" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full mx-4 flex items-center justify-center w-24 h-24 shadow-2xl transform hover:scale-105 transition-transform duration-200"
            >
           Agir
         </a>
@@ -59,8 +59,8 @@
         {/if}
       </div>
 
-      <a href="/bouton4" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Actualités</a>
-      <a href="/bouton5" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Nous contacter</a>
+      <a href="/bouton4" class="inline-block bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-full mx-4 flex items-center justify-center w-24 h-24 shadow-2xl transform hover:scale-105 transition-transform duration-200">Actualités</a>
+      <a href="/bouton5" class="inline-block bg-violet-500 hover:bg-violet-600 text-white font-bold rounded-full mx-4 flex items-center justify-center w-24 h-24 shadow-2xl transform hover:scale-105 transition-transform duration-200"> Contact</a>
     </div>
   </div>
 </div>
@@ -72,5 +72,10 @@
   
   
 <style>
-    @import 'tailwindcss/tailwind.css';
+    
+  @import 'tailwindcss/tailwind.css';
+  .background {
+    background-image: url('fondaquarelle.jpg'); 
+  }
+  
 </style>

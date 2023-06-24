@@ -12,7 +12,7 @@
     }
   </script>
   
-  <main class="bg-gray-200 py-10">
+  <main class="bg-blue-200 py-10">
     <div class="container mx-auto px-4">
       <div class="text-center">
         <h1 class="text-4xl font-bold mb-4">Inspirez vous...</h1>

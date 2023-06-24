@@ -1,6 +1,7 @@
 <script>
 </script>
-	<div class="bg-gray-200 py-10">
+	<div class="h-screen flex flex-col">
+	<div class="bg-gradient-to-b from-blue-200 via-white to-green-200 py-10">
 		<div class="container mx-auto px-4">
 		  <div class="text-center">
 			<h1 class="text-4xl font-bold mb-4">Co-construisons l’écofiscalité de demain! </h1>
@@ -11,7 +12,7 @@
 			  <div class="bg-white rounded-lg shadow-md p-6">
 				<h2 class="text-xl font-bold mb-2">Pourquoi la taxe carbone?  </h2>
 				<p class="text-gray-700 mb-4">Ecotaxe, gilets jaunes, marché carbone... Un point sur la fiscalité carbone! <br> Testez vos connaissances sur le sujet! </p>
-				<a href="/info" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">S'informer</a>
+				<a href="/info" class=" bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">S'informer</a>
 			  </div>
 			</div>
 			<div class="w-1/3 px-4">
@@ -31,9 +32,10 @@
 		  </div>
 		</div>
 	  </div>
+	
 
 
-	  <div class="bg-gray-200 py-8">
+	  <div class="bg-gradient-to-b from-green-200 via-white to-orange-200 py-8">
 		<div class="container mx-auto px-4 flex items-center">
 		  <div class="w-2/3">
 			<img src="Livrearbre.png" alt="Image" class="w-full">
@@ -46,7 +48,7 @@
 		</div>
 	  </div>
 
-	  <div class="bg-gray-200 py-8">
+	  <div class="bg-gradient-to-b from-orange-200 via-white to-rose-200 py-8">
 		<div class="container mx-auto px-4 flex items-center">
 			<div class="w-1/3 ml-4">
 				<h2 class="text-2xl font-bold mb-2">Un panorama de l’opinion sur la fiscalité verte </h2>
@@ -61,7 +63,7 @@
 	  </div>
 
 
-	  <div class="bg-gray-200 py-8">
+	  <div class="bg-gradient-to-b from-rose-200 via-white to-violet-200 py-8">
 		<div class="container mx-auto px-4 flex items-center">
 		  <div class="w-2/3">
 			<img src="Propositionsprojets.png" alt="Image" class="w-full">
@@ -74,7 +76,7 @@
 		</div>
 	  </div>
 
-	  <div class="bg-gray-200 py-8">
+	  <div class="bg-violet-200 py-8">
 		<div class="container mx-auto px-4 flex items-center">
 			<div class="w-1/3 ml-4">
 				<h2 class="text-2xl font-bold mb-2">Actualités récentes</h2>
@@ -87,7 +89,7 @@
 		  
 		</div>
 	  </div>
-
+	</div>
 <style>
 	@import 'tailwindcss/tailwind.css';
 	main {
@@ -102,4 +104,6 @@
 			max-width: none;
 		}
 	}
+
+    
 </style>
