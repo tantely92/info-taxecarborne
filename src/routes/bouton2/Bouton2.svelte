@@ -17,34 +17,34 @@
   </script>
   
   <main class="w-full h-full mt-28  bg-gradient-to-r from-green-200 py-10">
-    <div class="relative top-64 px-10 mx-auto text-center  z-50">
-      <div class="fixed w-full h-auto top-40 bg-gradient-to-r from-green-200 ">
+    <div class="absolute top-96 px-10  text-center">
+      <div class="fixed w-full  h-36 top-40  z-50">
         <div class="text-center">
           <h1 class="text-4xl font-bold mb-4 mt-10">Inspirez vous...</h1>
         </div>
       
         <div class=" flex justify-around mt-10">
-          <div class="px-4">
+          <div class="px-4 z-50">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
             ...des économistes environnementaux
             </button>
           </div>
-          <div class="px-4">
+          <div class="px-4 z-50">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
               ...des économistes écologiques
             </button>
           </div>
-          <div class="px-4">
+          <div class="px-4 z-50">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
               ...du monde de l’entreprise
             </button>
           </div>
-          <div class="px-4">
+          <div class="px-4 z-50">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(4)}>
                 ...de la sphère politique
             </button>
           </div>
-          <div class="px-4">
+          <div class="px-4 z-50">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(5)}>
                 ... des ONG
             </button>
@@ -90,7 +90,7 @@
             </div>
 
             <div class="">
-              <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=20">
+              <div class="overflow-auto background7 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  -z-50">
                 <img src="hourcade.png" alt="Image 1" class="w-1/4 mr-4">
                 <div>
                   <h2 id="Jean-Charles Hourcade" class="text-xl font-bold mb-2">Jean-Charles Hourcade</h2>
@@ -107,7 +107,7 @@
                     L'un des points clés pour allier questions sociales et fiscalité carbone en France serait l'utilisation des recettes de cette taxe à des fins sociales - par exemple, en réduisant les charges pour les foyers les plus affectés et à faibles revenus, pour favoriser l'emploi tout en luttant contre le changement climatique. </p>
                 </div>
               </div>
-            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=30">
+            <div class="overflow-auto background7 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=20">
                 
                 <div>
                   <h2 id="Jean Tirole" class=" text-xl font-bold mb-2">Jean Tirole</h2>
@@ -125,7 +125,7 @@
                 </div>
                 <img src="tirole.png" alt="Image 1" class="w-1/4">
               </div>
-            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=40">
+            <div class="overflow-auto background7 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=30">
                 <img src="picketty.png" alt="Image 1" class="w-1/4">
                 <div>
                   <h2 id="Picketty" class="text-xl font-bold mb-2">Picketty</h2>
@@ -144,7 +144,7 @@
                     L'approche de Piketty se concentre sur les inégalités entre les individus plutôt qu'entre les pays, un changement de perspective qui reconnaît les disparités de revenus et de consommation d'énergie à l'échelle mondiale. </p>
                 </div>
             </div>
-            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=50">
+            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=40">
                 
                 <div>
                   <h2 id="Pindick" class="text-xl font-bold mb-2 ">Pindyck</h2>
@@ -338,7 +338,7 @@
               <img src="cgtcfdt.png" alt="Image 1" class="w-1/4">
             </div>
           <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=40">
-              <img src="presidentielles2022.png" alt="Image 1" class="w-1/4">
+              <img src="presidentielle2022.png" alt="Image 1" class="w-1/4">
               <div>
                 <h2 id="Candidats à la présidentielle" class="text-xl font-bold mb-2">Candidats à la présidentielle</h2>
                 <p class="text-gray-700 mb-4 justify-text px-20">
@@ -502,7 +502,7 @@
                 <img src="greenpeace.png" alt="Image 3" class="w-1/3 h-1/3 mr-4">
               </div>
               <div class="flex items-center">
-                <img src="FNH.png" alt="Image 3" class="w-1/3 h-1/3 mr-4">
+                <img src="FNH.png" alt="Image 3" class="w-1/3 h-1/3 mr-4 -z-50">
                 <div class="bg-gradient-to-b from-green-200 via-white to-orange-200">
                   <h2 id="Fondation Nicolas Hulot" class="text-xl font-bold mx-4 text-center py-4">Fondation Nicolas Hulot</h2>
                   <p class="text-gray-700 mb-4 mx-4 text-justify">Préambule : La Fondation pour la Nature et l'Homme (FNH), fondée par l'écologiste Nicolas Hulot, est dédiée à la protection de l'environnement et à la lutte contre le changement climatique, avec des initiatives allant de la protection de la biodiversité à la transition énergétique. 

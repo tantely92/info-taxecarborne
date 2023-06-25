@@ -16,23 +16,32 @@
 
 <main class="bg-gradient-to-r from-blue-100">
   <div class="absolute w-full top-96  mx-auto">
-    <div class="bg-gradient-to-r from-blue-100 fixed w-full top-40 py-10 z-10">
+    <div class=" fixed w-full top-40 py-10 z-10">
     <div class="text-center">
       <h1 class="text-4xl font-bold">Les principales informations</h1>
     </div>
-    <div class="flex justify-between mt-10">
-      <div class=" px-4">
-        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
+    <div class="flex justify-around mt-10">
+      <div class="px-4">
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4 lg:hidden" on:click={() => toggleSection(1)}>
+          Tarification
+        </button>
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4 hidden lg:block" on:click={() => toggleSection(1)}>
           Différents types de tarification carbone
         </button>
       </div>
-      <div class=" px-4">
-        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
+      <div class="px-4">
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4 lg:hidden" on:click={() => toggleSection(2)}>
+          Historique
+        </button>
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4 hidden lg:block" on:click={() => toggleSection(2)}>
           Historique récent en France
         </button>
       </div>
-      <div class=" px-4">
-        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
+      <div class="px-4">
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4 lg:hidden" on:click={() => toggleSection(3)}>
+          Chiffres
+        </button>
+        <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4 hidden lg:block" on:click={() => toggleSection(3)}>
           Les principaux chiffres en France
         </button>
       </div>
@@ -52,34 +61,25 @@
             {#if activeSection === 1}
             
             <div class="">
-              <div class= "z-0 sticky top-80 background1 flex items-center">
-
-                <img src="Mondecarbone.png" alt="Image 1" class="w-1/2 rounded-lg mr-4">
-                <div>
-                  <h2 id="Introduction" class="text-3xl font-extrabold py-7 text-center mb-2">Introduction </h2>
-                  <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">Chiffres et panorama global de la tarification carbone 
-
-                    64 initiatives mondiales pour la tarification du carbone, couvrant 22% des émissions de GES. 
-                    
-                    Plus de 1000 entreprises soumises à des régulations sur le carbone; 700 autres se préparent à suivre. 
-                    
-                    La CCNUCC de l'ONU (1992) et le Protocole de Kyoto (1997) pionniers pour la réduction des émissions de GES. 
-                    
-                    Accord de Paris (COP21, 2015): objectif global, limiter le réchauffement à moins de 2°C. Un tournant historique. 
-                    
-                    La tarification du carbone: un outil clé pour atteindre ces objectifs. 
-                    
-                    Objectif principal de la taxation carbone: inciter à une économie à faibles émissions de carbone. 
-                    
-                    Deux méthodes principales: taxes carbone et systèmes d'échange de quotas (marchés carbone). 
-                    
-                    Les grandes industries souvent incluses dans les marchés carbone; les "petits émetteurs" (voitures, chauffage, etc.) soumis à une taxe carbone. 
-                    
-                    En France: taxe carbone (2014) et prix carbone en interne pour les entreprises. 
-                    
-                    Union européenne: système d'échange de quotas d'émission et taxe aux frontières pour les entreprises. </p>
+              <div class="z-0 sticky top-80 background1 flex flex-col sm:flex-row items-center p-4">
+                <img src="Mondecarbone.png" alt="Image 1" class="hidden lg:block w-full lg:w-1/2 xl:w-1/3 mb-4 sm:mb-0 rounded-lg mr-4"> 
+                <div class="text-center sm:text-left">
+                    <h2 id="Introduction" class="text-3xl font-extrabold py-7 text-center mb-2">Introduction</h2>
+                    <p class="text-gray-900 font-semibold text-justify">Chiffres et panorama global de la tarification carbone
+                        64 initiatives mondiales pour la tarification du carbone, couvrant 22% des émissions de GES.
+                        Plus de 1000 entreprises soumises à des régulations sur le carbone; 700 autres se préparent à suivre.
+                        La CCNUCC de l'ONU (1992) et le Protocole de Kyoto (1997) pionniers pour la réduction des émissions de GES.
+                        Accord de Paris (COP21, 2015): objectif global, limiter le réchauffement à moins de 2°C. Un tournant historique.
+                        La tarification du carbone: un outil clé pour atteindre ces objectifs.
+                        Objectif principal de la taxation carbone: inciter à une économie à faibles émissions de carbone.
+                        Deux méthodes principales: taxes carbone et systèmes d'échange de quotas (marchés carbone).
+                        Les grandes industries souvent incluses dans les marchés carbone; les "petits émetteurs" (voitures, chauffage, etc.) soumis à une taxe carbone.
+                        En France: taxe carbone (2014) et prix carbone en interne pour les entreprises.
+                        Union européenne: système d'échange de quotas d'émission et taxe aux frontières pour les entreprises.
+                    </p>
                 </div>
-              </div>
+            </div>
+            
               <div class="z-10 sticky top-80 background2 flex items-center">
 
                 

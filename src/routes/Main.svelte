@@ -1,37 +1,40 @@
 <script>
 </script>
-	<div class="absolute w-full top-40 h-screen flex flex-col">
+<div class="absolute w-full top-40 h-screen flex flex-col">
 	<div class="bg-gradient-to-b from-blue-200 via-white to-green-200 py-10">
 		<div class="container mx-auto px-4 text-center">
 		  <div class="text-center py-10">
 			<h1 class="text-4xl font-bold mb-4">Co-construisons l’écofiscalité de demain! </h1>
 			<p class="text-lg text-gray-700">S’informer, s’inspirer et participer à la réflexion sur une taxe carbone répondant aux défis écologiques et sociaux </p>
 		  </div>
-		  <div class="flex py-14">
-			<div class="w-1/3 px-4">
+		  <div class="flex flex-col sm:flex-row py-14">
+			<div class="w-full sm:w-1/3 px-4 mb-4 sm:mb-0">
 			  <div class="bg-white rounded-lg shadow-md p-6 w-full h-auto">
-				<h2 class="text-xl font-bold mb-2">Pourquoi la taxe carbone?  </h2>
-				<p class="text-gray-700 mb-4">Ecotaxe, gilets jaunes, marché carbone... Un point sur la fiscalité carbone! <br> Testez vos connaissances sur le sujet! </p>
+				<h2 class="text-xl font-bold mb-2">Pourquoi la taxe carbone? </h2>
+				<p class="text-gray-700 mb-4 hidden sm:block">Ecotaxe, gilets jaunes, marché carbone... Un point sur la fiscalité carbone! <br> Testez vos connaissances sur le sujet! </p>
 				<a href="/info" class="text-lg bg-blue-500  hover:bg-blue-600 text-white font-bold py-2 px-4 rounded block text-center">S'informer</a>
 			  </div>
 			</div>
-			<div class="w-1/3 px-4">
+			<div class="w-full sm:w-1/3 px-4 mb-4 sm:mb-0">
 			  <div class="bg-white rounded-lg shadow-md p-6 w-full h-auto">
 				<h2 class="text-xl font-bold mb-2">Qui pense quoi? </h2>
-				<p class="text-gray-700 mb-4">Autant d’avis que de parties prenantes... <br>Faites-vous votre opinion et évaluez les différentes positions  </p>
+				<p class="text-gray-700 mb-4 hidden sm:block">Autant d’avis que de parties prenantes... <br>Faites-vous votre opinion et évaluez les différentes positions  </p>
 				<a href="/bouton2" class="text-lg bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded block text-center">S'inspirer</a>
 			  </div>
 			</div>
-			<div class="w-1/3 px-4">
+			<div class="w-full sm:w-1/3 px-4 mb-4 sm:mb-0">
 			  <div class="bg-white rounded-lg shadow-md p-6 w-full h-auto">
-				<h2 class="text-xl font-bold mb-2">Des pistes pour la fiscalité verte de demain?   </h2>
-				<p class="text-gray-700 mb-4">La taxe verte idéale existe-t-elle? <br> Revue des différentes recommandations et VOS suggestions!  </p>
+				<h2 class="text-xl font-bold mb-2">Des pistes pour la fiscalité verte de demain? </h2>
+				<p class="text-gray-700 mb-4 hidden sm:block">La taxe verte idéale existe-t-elle? <br> Revue des différentes recommandations et VOS suggestions! </p>
 				<a href="/bouton3" class="text-lg bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded block text-center">Agir</a>
 			  </div>
 			</div>
 		  </div>
 		</div>
 	  </div>
+
+
+
 	
 	  
 
