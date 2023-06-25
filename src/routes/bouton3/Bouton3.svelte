@@ -326,47 +326,47 @@
               <p>On veut savoir!</p> <br/><br/>
 
                 {#if apiResult != null}
-
-                    {#if apiResult === true}
+                  {#if apiResult === true}
                     <InlineNotification
                         lowContrast
                         kind="success"
-                        title="Success:"
-                        subtitle="Your message has been received"
+                        title="Succès:"
+                        subtitle="Merci pour votre retour!"
                     />
-                    {:else}
-                    <InlineNotification lowContrast kind="error"
-                        title="Error:"
-                        subtitle="An internal server error occurred."
-                    />
+                  {:else}
+                      <InlineNotification lowContrast kind="error"
+                          title="Erreur interne du serveur : "
+                          subtitle="Merci de réessayer"
+                      />
+                  {/if} 
+                {:else}
+                  <Form on:submit={handleSubmit}>
+                    <FormGroup>
+                      <Slider labelText="Pensez-vous que cette taxe carbone soit juste socialement parlant ?" 
+                            id="socialFair" bind:value={$form.socialFair} 
+                            min={0} max={10} step={1} aria-label="Curseur avis social" />
+                    </FormGroup>
+                    <FormGroup>
+                      <Slider labelText="Pensez-vous que cette taxe carbone soit juste écologiquement parlant ?" 
+                            id="ecoFair" bind:value={$form.ecoFair} 
+                            min={0} max={10} step={1} aria-label="Curseur avis ecologique" />
+                    </FormGroup>
+                    <FormGroup>
+                      <Slider labelText="Que pensez-vous du prix de cette taxe ? (0 : Trop cher, 10 : Pas cher)" 
+                            id="pricing" bind:value={$form.pricing} 
+                            min={0} max={10} step={1} aria-label="Curseur avis prix" />
+                    </FormGroup>
+                    <FormGroup>
+                      <TextArea labelText="Quelles seraient vos suggestions ?" name="suggestion" bind:value={$form.suggestion}
+                      placeholder="Ecrivez ici..." invalid={$errors.suggestion.length > 0} invalidText={$errors.suggestion}
+                      maxCount={100}/>
+                    </FormGroup>
 
-                    {/if}    
+                    <Button type="submit" disabled={$isSubmitting}>Soumettre mon avis</Button>
+                    
+                  </Form>
+                      
                 {/if}
-              <Form on:submit={handleSubmit}>
-                <FormGroup>
-                  <Slider labelText="Pensez-vous que cette taxe carbone soit juste socialement parlant ?" 
-                        id="socialFair" bind:value={$form.socialFair} 
-                        min={0} max={10} step={1} aria-label="Curseur avis social" />
-                </FormGroup>
-                <FormGroup>
-                  <Slider labelText="Pensez-vous que cette taxe carbone soit juste écologiquement parlant ?" 
-                        id="ecoFair" bind:value={$form.ecoFair} 
-                        min={0} max={10} step={1} aria-label="Curseur avis ecologique" />
-                </FormGroup>
-                <FormGroup>
-                  <Slider labelText="Que pensez-vous du prix de cette taxe ? (0 : Trop cher, 10 : Pas cher)" 
-                        id="pricing" bind:value={$form.pricing} 
-                        min={0} max={10} step={1} aria-label="Curseur avis prix" />
-                </FormGroup>
-                <FormGroup>
-                  <TextArea labelText="Quelles seraient vos suggestions ?" name="suggestion" bind:value={$form.suggestion}
-                  placeholder="Ecrivez ici..." invalid={$errors.suggestion.length > 0} invalidText={$errors.suggestion}
-                  maxCount={100}/>
-                </FormGroup>
-
-                <Button type="submit" disabled={$isSubmitting}>Soumettre mon avis</Button>
-                
-              </Form>
             </div>  
 
             

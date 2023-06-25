@@ -48,19 +48,18 @@
     {#if apiResult != null}
 
         {#if apiResult === true}
-        <InlineNotification
-            lowContrast
-            kind="success"
-            title="Success:"
-            subtitle="Your message has been received"
-        />
+            <InlineNotification
+                lowContrast
+                kind="success"
+                title="Succès:"
+                subtitle="Merci pour votre retour!"
+            />
         {:else}
-        <InlineNotification lowContrast kind="error"
-            title="Error:"
-            subtitle="An internal server error occurred."
-        />
-
-        {/if}    
+            <InlineNotification lowContrast kind="error"
+                title="Erreur interne du serveur : "
+                subtitle="Merci de réessayer"
+            />
+        {/if}   
     {/if}
     <Form on:submit={handleSubmit}>
 
