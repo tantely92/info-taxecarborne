@@ -1,7 +1,7 @@
 <script>
  
   
-  import Quizz from '../quizz/Quizz.svelte'; // Remplacez 'TestComponent' par le nom de votre composant Svelte
+  import Quizz from './quizz/Quizz.svelte';
 
   let activeSection = null;
   let resultat = null;

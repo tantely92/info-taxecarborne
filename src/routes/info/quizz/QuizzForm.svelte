@@ -140,19 +140,4 @@
   background-size: cover;
   background-position: center;
 }
-
-.progress-bar {
-    width: 100%;
-    height: 20px;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-
-  .progress {
-    height: 100%;
-    background-color: #007bff;
-    transition: width 0.3s ease-in-out;
-  }
-
 </style>

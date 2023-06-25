@@ -561,9 +561,5 @@
       white-space: pre-line;
     }
 
-    .anchor {
-        scroll-margin-top: b-8; 
-    }
-
   
     </style>
