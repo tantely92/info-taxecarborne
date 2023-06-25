@@ -40,10 +40,10 @@
     });
 
 </script>
-<div class="absolute w-full top-40 page bg-gradient-to-r from-violet-200 ">
+<div class="page bg-gradient-to-r from-violet-200  ">
 
-    <h2>Merci pour vos retours!</h2>
-    <p>Vous pouvez inscrire vos coordonnées et nous faire un retour sur votre expérience "Info taxecarbone"! Nous reviendrons vers vous très vite, merci!</p> <br/><br/>
+    <h2 class="text-3xl font-extrabold py-18 mt-48 text-center mb-2">Merci de nous faire un retour de votre expérience!</h2>
+    <p class="text-gray-900 font-semibold text-center ml-4 mr-4 mb-4 ">Vous pouvez inscrire vos coordonnées et nous faire un retour sur votre expérience "Info taxecarbone"! Nous reviendrons vers vous très vite, merci!</p> <br/><br/>
 
     {#if apiResult != null}
 
@@ -65,31 +65,39 @@
     <Form on:submit={handleSubmit}>
 
         <FormGroup>
-            <TextInput labelText="Name" name="name" 
+            <TextInput  labelText="Votre nom" name="name" 
                 on:change={handleChange} bind:value={$form.name}
                 invalid={$errors.name.length > 0} invalidText={$errors.name}/>
         </FormGroup>
 
         <FormGroup>
-            <TextInput labelText="Email" name="email" type="email" 
+            <TextInput  labelText="Votre email" name="email" type="email" 
                 on:change={handleChange} bind:value={$form.email}
                 invalid={$errors.email.length > 0} invalidText={$errors.email}/>
         </FormGroup>
 
 
         <FormGroup>
-            <TextArea labelText="Message" name="message" type="textarea"
+            <TextArea labelText="Vos suggestions!" name="message" type="textarea"
                 on:change={handleChange} bind:value={$form.message}
                 invalid={$errors.message.length > 0} invalidText={$errors.message}/>
         </FormGroup>
 
 
-        <Button type="submit" disabled={$isSubmitting}>Submit</Button>
+        <Button class="bg-slate-600 text-3xl font-extrabold py-7 text-center mb-2 place-items-center px-7"  type="submit" disabled={$isSubmitting}>Envoyer le formulaire</Button>
     </Form>
 </div>
 
 <style>
     .page {
-        margin: 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 </style>
