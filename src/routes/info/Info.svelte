@@ -7,32 +7,43 @@
   let resultat = null;
   function toggleSection(section) {
     activeSection = section === activeSection ? null : section;
+    let image = document.getElementById("imageToFade");
+    if (image) {
+      image.remove();
+    }
   }
 </script>
 
-<main class="bg-gradient-to-r from-blue-200">
+<main class="bg-gradient-to-r from-blue-100">
   <div class="absolute w-full top-96  mx-auto">
-    <div class="bg-gradient-to-r from-blue-200 fixed w-full top-40 py-10 z-10">
+    <div class="bg-gradient-to-r from-blue-100 fixed w-full top-40 py-10 z-10">
     <div class="text-center">
       <h1 class="text-4xl font-bold">Les principales informations</h1>
     </div>
-    <div class="flex justify-items-center mt-10">
-      <div class="w-2/3 px-4">
+    <div class="flex justify-between mt-10">
+      <div class=" px-4">
         <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
           Différents types de tarification carbone
         </button>
       </div>
-      <div class="w-2/3 px-4">
+      <div class=" px-4">
         <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
           Historique récent en France
         </button>
       </div>
-      <div class="w-1/3 px-4">
+      <div class=" px-4">
         <button class="bg-blue-500 hover:bg-blue-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
           Les principaux chiffres en France
         </button>
       </div>
+      
     </div>
+    <div class="flex justify-center  h-screen">
+      <div class="blur-sm">
+          <img id="imageToFade" src="Livrearbre.png" alt="Image 1" class="w-full object-cover  mr-4">
+      </div>
+  </div>
+  
     </div>
     {#if activeSection !== null}
       <div class="">
@@ -41,7 +52,7 @@
             {#if activeSection === 1}
             
             <div class="">
-              <div class= "background1 flex items-center">
+              <div class= "z-0 sticky top-80 background1 flex items-center">
 
                 <img src="Mondecarbone.png" alt="Image 1" class="w-1/2 rounded-lg mr-4">
                 <div>
@@ -69,7 +80,7 @@
                     Union européenne: système d'échange de quotas d'émission et taxe aux frontières pour les entreprises. </p>
                 </div>
               </div>
-              <div class="background2 flex items-center">
+              <div class="z-10 sticky top-80 background2 flex items-center">
 
                 
                 <div>
@@ -91,7 +102,7 @@
                 </div>
                 <img src="Marchecarbone.png" alt="Image 1" class="w-1/2 h-full rounded-lg">
               </div>
-              <div class="background3 flex items-center">
+              <div class="z-20 sticky top-80 background3 flex items-center">
 
                 <img src="Unioneuropenneecologie.png" alt="Image 1" class="w-1/2 rounded-lg mr-4">
                 <div>
@@ -111,7 +122,7 @@
                     L'UE vise une tarification uniforme du carbone à l'échelle mondiale, encourageant la réduction des émissions et des pratiques durables. </p>
                 </div>
               </div>
-              <div class="background4 flex items-center">
+              <div class="z-30 sticky top-80 background4 flex items-center">
 
                 
                 <div>
@@ -136,11 +147,11 @@
                 </div>
                 <img src="Prixducarboneinterne.png" alt="Image 1" class="w-1/2 h-full rounded-lg">
               </div>
-              <div class="background5 flex items-center">
+              <div class="z-40 sticky top-64 background5 flex items-center">
 
                 <img src="Taxecarbone.png" alt="Image 1" class="w-1/2 mr-4 rounded-lg">
                 <div>
-                  <h2 id="LA Taxe carbone" class="text-3xl font-extrabold py-7 text-center mb-2">LA Taxe carbone</h2>
+                  <h2 id="LA Taxe carbone" class="text-3xl font-extrabold py-7 text-center mb-4">LA Taxe carbone</h2>
                   <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">"CCE" et "TICPE" sont deux taxes sur les produits énergétiques en France. 
 
                     "CCE", ou "Contribution Climat Énergie”, est une taxe carbone; "TICPE", ou "Taxe Intérieure de Consommation sur les Produits Énergétiques", est plus large, couvrant tous les produits énergétiques. 
@@ -167,7 +178,7 @@
             </div>
 
 
-              <div class="background6 flex items-center">
+              <div class="z-30 sticky top-80 background6 flex items-center">
                 <img src="ecotaxe.png" alt="Image 2" class="w-1/2 mr-4 rounded-lg">
                 <div>
                   <h2 id="Les débuts de la taxe carbone en France" class="text-3xl font-extrabold py-7 text-center mb-2">Les débuts de la taxe carbone en France </h2>
@@ -190,7 +201,7 @@
                     Le contrat avec Ecomouv a été résilié par l'État en octobre 2014, entraînant un coût final estimé à 957 millions d'euros pour l'État. </p>
                 </div>
               </div>
-              <div class="background7 flex items-center">
+              <div class="z-40 sticky top-80 background7 flex items-center">
                 <div>
                   <h2 id="L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes" class="text-3xl font-extrabold py-7 text-center mb-2 px-10">L'augmentation de la taxe carbone et le déclenchement du mouvement des gilets jaunes  </h2>
                   <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">La loi de finances 2014 a introduit une taxe carbone, s'appliquant à tous les secteurs économiques, pour aider la France à atteindre ses objectifs de réduction des émissions selon les Accords de Paris 2015. 
@@ -210,10 +221,10 @@
                 <img src="gilletsjaunesmanif.png" alt="Image 2" class="w-1/2 mr-4 rounded-lg">
 
               </div>
-              <div class="background8 flex items-center">
+              <div class="z-50 sticky top-96 background8 flex items-center">
                 <img src="Nouveautetaxe.png" alt="Image 2" class="w-1/2 mr-4 rounded-lg">
                 <div>
-                  <h2 id="Vers une nouvelle taxe?" class="text-3xl font-extrabold py-7 text-center mb-2">Vers une nouvelle taxe ?</h2>
+                  <h2 id="Vers une nouvelle taxe?" class="text-3xl font-extrabold py-7 text-center mb-6">Vers une nouvelle taxe ?</h2>
                   <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">En avril 2021, l'UE s'accorde sur un objectif de réduction des émissions de gaz à effet de serre de 55 % d'ici 2030 et la neutralité carbone d'ici 2050, fixés dans le paquet climatique "Fit for 55 by 2030". 
 
                     En juillet 2021, la Commission européenne présente un mécanisme d'ajustement carbone aux frontières de l'UE, introduisant une taxe carbone sur les importations. 
@@ -229,9 +240,9 @@
               </div>
             {/if}
             {#if activeSection === 3}
-              <div class="background9 flex items-center">
+              <div class="sticky z-50 top-60 background9 flex items-center">
                 <img src="chiffrestaxe.png" alt="Image 3" class="w-1/2 mr-4 rounded-lg">
-                <div>
+                <div class="">
                   <h2 class="text-3xl font-extrabold py-7 text-center mb-2">Chiffres sur la taxe carbone </h2>
                   <p class="text-gray-900 font-semibold text-justify ml-4 mr-4 mb-4">Plus de la moitié du prix de l'essence en France (55,6 % pour le diesel, 58,2 % pour l'essence sans plomb 95) est constituée de taxes (analyse de l'UFIP, octobre 2021). 
 

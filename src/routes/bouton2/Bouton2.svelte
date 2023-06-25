@@ -16,80 +16,85 @@
     }
   </script>
   
-  <main class="w-full h-screen overflow-y-auto mt-40  bg-gradient-to-r from-green-200 py-10">
-    <div class="container mx-auto px-4">
+  <main class="w-full h-full mt-28  bg-gradient-to-r from-green-200 py-10">
+    <div class="relative top-64 px-10 mx-auto text-center  z-50">
+    <div class="fixed w-full h-auto top-40 bg-gradient-to-r from-green-200 ">
       <div class="text-center">
-        <h1 class="text-4xl font-bold mb-4">Inspirez vous...</h1>
-        <p class="text-lg text-gray-700">Et donnez votre avis! </p>
+        <h1 class="text-4xl font-bold mb-4 mt-10">Inspirez vous...</h1>
       </div>
       
-      <div class="flex justify-center mt-10">
-        <div class="w-1/3 px-4">
+      <div class=" flex justify-around mt-10">
+        <div class="px-4">
           <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
             ...des économistes environnementaux
           </button>
         </div>
-        <div class="w-1/3 px-4">
+        <div class="px-4">
           <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
             ...des économistes écologiques
           </button>
         </div>
-        <div class="w-1/3 px-4">
+        <div class="px-4">
           <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
             ...du monde de l’entreprise
           </button>
         </div>
-        <div class="w-1/3 px-4">
+        <div class="px-4">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(4)}>
                 ...de la sphère politique
             </button>
           </div>
-          <div class="w-1/3 px-4">
+          <div class="px-4">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(5)}>
                 ... des ONG
             </button>
           </div>
-          
+        </div>
+        <div class="flex justify-center  h-screen">
+        <div class="blur-sm">
+            <img id="imageToFade" src="Partagearbre.png" alt="Image 1" class="w-full object-cover  mr-4">
+          </div>
       </div>
-      <div class="blur-sm">
-        <img id="imageToFade" src="Partagearbre.png" alt="Image 1" class="w-1/3  mr-4">
-      </div>
+    </div>
+      
+
+
 
       {#if activeSection !== null}
       <div class="flex justify-center mt-4">
-        <div class="w-full">
-          <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="sticky top-80">
+          <div class=" rounded-lg shadow-md">
             {#if activeSection === 1}
 
-            <div class="flex justify-center mt-10">
-                <div class="w-1/3 px-4">
-                  <a href="#Jean-Charles Hourcade" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+            <div class="fixed top-80 mt-7 flex justify-around w-full px-4">
+                <div class="mb-10">
+                  <a href="#Jean-Charles Hourcade" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Jean-Charles Hourcade
                   </a>
                 </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Jean Tirole" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <div class=" mb-10">
+                  <a href="#Jean Tirole" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Jean Tirole
                   </a>
                 </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Picketty" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <div class="mb-10">
+                  <a href="#Picketty" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Picketty
                   </a>
                 </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Pindick" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <div class="mb-10">
+                  <a href="#Pindick" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Pindyck
                   </a>
                 </div>
             </div>
 
-
-            <div class="flex items-center">
-              <img src="hourcade.png" alt="Image 1" class="w-16 h-16 mr-4">
+            <div class="">
+            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=20">
+              <img src="hourcade.png" alt="Image 1" class="w-1/4 mr-4">
               <div>
                 <h2 id="Jean-Charles Hourcade" class="text-xl font-bold mb-2">Jean-Charles Hourcade</h2>
-                <p class="text-gray-700 mb-4">Jean-Charles Hourcade, économiste et spécialiste du changement climatique, dénonce le brouillage autour de la taxe carbone, souvent présentée comme punitivement antinomique avec l'économie et la justice sociale. 
+                <p class="text-gray-700 mb-4 justify-text px-20">Jean-Charles Hourcade, économiste et spécialiste du changement climatique, dénonce le brouillage autour de la taxe carbone, souvent présentée comme punitivement antinomique avec l'économie et la justice sociale. 
 
                     Il réfute l'idée que la taxe carbone est punitive et culpabilisatrice, arguant qu'elle stimule l'innovation, modifie les comportements non durables et corrige les marchés défaillants. 
                     
@@ -102,11 +107,11 @@
                     L'un des points clés pour allier questions sociales et fiscalité carbone en France serait l'utilisation des recettes de cette taxe à des fins sociales - par exemple, en réduisant les charges pour les foyers les plus affectés et à faibles revenus, pour favoriser l'emploi tout en luttant contre le changement climatique. </p>
               </div>
             </div>
-            <div class="flex items-center">
-                <img src="tirole.png" alt="Image 1" class="w-16 h-16 mr-4">
+            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=30">
+                
                 <div>
-                  <h2 id="Jean Tirole" class="text-xl font-bold mb-2">Jean Tirole</h2>
-                  <p class="text-gray-700 mb-4">Jean Tirole, économiste renommé, insiste sur l'importance de l'action collective européenne en matière de taxe carbone pour éviter les "fuites carbones", où les entreprises se délocalisent vers des régions moins taxées. 
+                  <h2 id="Jean Tirole" class=" text-xl font-bold mb-2">Jean Tirole</h2>
+                  <p class="text-gray-700 mb-4 justify-text px-20">Jean Tirole, économiste renommé, insiste sur l'importance de l'action collective européenne en matière de taxe carbone pour éviter les "fuites carbones", où les entreprises se délocalisent vers des régions moins taxées. 
 
                     Il propose la création d'une "Banque du Carbone", agissant de manière indépendante pour gérer et augmenter progressivement le tarif du carbone, analogique à une banque centrale. 
                     
@@ -118,15 +123,13 @@
                     
                     Il met également en lumière le rôle crucial des consommateurs en démocratie : le changement doit être soutenu par une prise de conscience collective, car les entreprises et les politiques s'alignent sur les demandes de leurs consommateurs et électeurs respectifs. </p>
                 </div>
+                <img src="tirole.png" alt="Image 1" class="w-1/4">
               </div>
-            <div class="flex items-center">
-                <img src="picketty.png" alt="Image 1" class="w-16 h-16 mr-4">
+            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=40">
+                <img src="picketty.png" alt="Image 1" class="w-1/4">
                 <div>
                   <h2 id="Picketty" class="text-xl font-bold mb-2">Picketty</h2>
-                  <p class="text-gray-700 mb-4">Il met également en lumière le rôle crucial des consommateurs en démocratie : le changement doit être soutenu par une prise de conscience collective, car les entreprises et les politiques s'alignent sur les demandes de leurs consommateurs et électeurs respectifs. 
-
- 
-                    Picketty 
+                  <p class="text-gray-700 mb-4 justify-text px-20">
                     
                     Thomas Piketty, expert reconnu des inégalités économiques, remet en question l'impact équitable de la taxe carbone, en soulignant les inégalités qu'elle peut causer, en particulier pour les ménages les plus modestes. 
                     
@@ -141,11 +144,11 @@
                     L'approche de Piketty se concentre sur les inégalités entre les individus plutôt qu'entre les pays, un changement de perspective qui reconnaît les disparités de revenus et de consommation d'énergie à l'échelle mondiale. </p>
                 </div>
             </div>
-            <div class="flex items-center">
-                <img src="pindick.png" alt="Image 1" class="w-16 h-16 mr-4">
+            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=50">
+                
                 <div>
-                  <h2 id="Pindick" class="text-xl font-bold mb-2">Pindyck</h2>
-                  <p class="text-gray-700 mb-4">Robert S. Pindyck critique les modèles d'évaluation intégrée (IAMs) pour estimer le coût social du carbone (CSC), soulignant leur manque de fiabilité à cause des hypothèses arbitraires qu'ils requièrent. 
+                  <h2 id="Pindick" class="text-xl font-bold mb-2 ">Pindyck</h2>
+                  <p class="text-gray-700 mb-4 justify-text px-20">Robert S. Pindyck critique les modèles d'évaluation intégrée (IAMs) pour estimer le coût social du carbone (CSC), soulignant leur manque de fiabilité à cause des hypothèses arbitraires qu'ils requièrent. 
 
                     Les IAMs sont composés de plusieurs éléments, notamment des projections d'émissions futures de CO2 et de leurs impacts économiques. Cependant, les modèles peuvent varier considérablement en fonction des hypothèses faites, en particulier en ce qui concerne la fonction de bien-être social et son taux de préférence temporelle. 
                     
@@ -157,177 +160,190 @@
                     
                     En dépit de l'incertitude entourant l'estimation du CSC, Pindyck suggère de commencer par une petite taxe sur le carbone pour reconnaître le coût social du carbone, puis d'ajuster cette taxe à mesure que nous en apprenons davantage sur le véritable coût du carbone. </p>
                 </div>
+                <img src="pindick.png" alt="Image 1" class="w-1/4">
+            </div>
             </div>
             {/if}
             {#if activeSection === 2}
 
-            <div class="flex justify-center mt-10">
-                <div class="w-1/3 px-4">
-                  <a href="#Porcher" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Porcher
-                  </a>
-                </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Parrique" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Parrique
-                  </a>
-                </div>
+            <div class="fixed top-80 mt-7 flex justify-around w-full px-4">
+              <div class="mb-10">
+                <a href="#Jean-Charles Hourcade" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Porcher
+                </a>
+              </div>
+              <div class=" mb-10">
+                <a href="#Jean Tirole" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Parrique
+                </a>
+              </div>
+  
+          </div>
+
+          <div class="">
+          <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=20">
+            <img src="porcher.png" alt="Image 1" class="w-1/4 mr-4">
+            <div>
+              <h2 id="Jean-Charles Hourcade" class="text-xl font-bold mb-2">Porcher</h2>
+              <p class="text-gray-700 mb-4 justify-text px-20">Thomas Porcher, économiste français engagé, estime que la taxe carbone actuelle est inéquitable car elle ne prend pas en compte la "situation économique et géographique" des individus. 
+
+                Selon lui, la taxe carbone affecte davantage les foyers modestes que les foyers aisés, ce qui va à l'encontre du principe du "pollueur-payeur". 
                 
+                Porcher souligne que la capacité d'adaptation des consommateurs est faible à court terme, et qu'une hausse de la taxe carbone entraînerait une forte opposition de la population, comme l'a démontré le mouvement des Gilets Jaunes. 
+                
+                Pour rendre la taxe carbone plus équitable, Porcher suggère d'augmenter la taxation pour ceux qui ont accès à des modes de transport alternatifs mais qui choisissent malgré tout des "véhicules à forte cylindrée". 
+                
+                Cette approche permettrait d'inciter les individus à modifier leur comportement, et serait plus conforme au principe du "pollueur-payeur". 
+                
+                En conclusion, Porcher préconise une taxe carbone flexible qui tiendrait compte de la situation des individus, bien que cette proposition puisse être difficile à mettre en œuvre en pratique.</p>
             </div>
-
-            <div class="flex items-center">
-              <img src="porcher.png" alt="Image 2" class="w-16 h-16 mr-4">
+          </div>
+          <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=30">
+              
               <div>
-                <h2 id="Porcher" class="text-xl font-bold mb-2">Porcher</h2>
-                <p class="text-gray-700 mb-4">Thomas Porcher, économiste français engagé, estime que la taxe carbone actuelle est inéquitable car elle ne prend pas en compte la "situation économique et géographique" des individus. 
+                <h2 id="Jean Tirole" class=" text-xl font-bold mb-2">Parrique</h2>
+                <p class="text-gray-700 mb-4 justify-text px-20">Timothée Parrique, chercheur et activiste français, critique l'idée qu'une économie puisse continuer à croître tout en réduisant son empreinte écologique, un concept connu sous le nom de "découplage". 
 
-                    Selon lui, la taxe carbone affecte davantage les foyers modestes que les foyers aisés, ce qui va à l'encontre du principe du "pollueur-payeur". 
-                    
-                    Porcher souligne que la capacité d'adaptation des consommateurs est faible à court terme, et qu'une hausse de la taxe carbone entraînerait une forte opposition de la population, comme l'a démontré le mouvement des Gilets Jaunes. 
-                    
-                    Pour rendre la taxe carbone plus équitable, Porcher suggère d'augmenter la taxation pour ceux qui ont accès à des modes de transport alternatifs mais qui choisissent malgré tout des "véhicules à forte cylindrée". 
-                    
-                    Cette approche permettrait d'inciter les individus à modifier leur comportement, et serait plus conforme au principe du "pollueur-payeur". 
-                    
-                    En conclusion, Porcher préconise une taxe carbone flexible qui tiendrait compte de la situation des individus, bien que cette proposition puisse être difficile à mettre en œuvre en pratique. </p>
+                  Il soutient que la taxe carbone, bien que souvent considérée comme un outil pour encourager la réduction de l'empreinte écologique, n'est qu'un instrument parmi d'autres, et pas nécessairement le meilleur. Il mentionne l'exemple de la Suède où une taxe carbone n'a pas réussi à décarboner l'économie. 
+                  
+                  Pour Parrique, un système de quotas carbone sous forme de permis, appliqué à l'ensemble de l'économie, serait une solution plus appropriée pour aborder le problème du changement climatique. 
+                  
+                  Il préconise également des mesures d'interdiction, comme l'interdiction des véhicules thermiques et de la publicité associée, ainsi que des politiques ciblées, comme une stratégie de décroissance du secteur de l'aviation commerciale. 
+                  
+                  Selon Parrique, se concentrer uniquement sur la taxe carbone et la croissance verte serait insuffisant face à la gravité du défi climatique. 
+                  
+                  En conclusion, il semble que Parrique plaide pour une approche intégrée et radicale pour allier questions sociales et fiscalité carbone, incluant des quotas carbone, des interdictions spécifiques et une réorientation des secteurs les plus polluants. </p>
               </div>
+              <img src="parrique.png" alt="Image 1" class="w-1/4">
             </div>
-            <div class="flex items-center">
-                <img src="parrique.png" alt="Image 2" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="Parrique" class="text-xl font-bold mb-2">Parrique</h2>
-                  <p class="text-gray-700 mb-4">Timothée Parrique, chercheur et activiste français, critique l'idée qu'une économie puisse continuer à croître tout en réduisant son empreinte écologique, un concept connu sous le nom de "découplage". 
+          
+          </div>
 
-                    Il soutient que la taxe carbone, bien que souvent considérée comme un outil pour encourager la réduction de l'empreinte écologique, n'est qu'un instrument parmi d'autres, et pas nécessairement le meilleur. Il mentionne l'exemple de la Suède où une taxe carbone n'a pas réussi à décarboner l'économie. 
-                    
-                    Pour Parrique, un système de quotas carbone sous forme de permis, appliqué à l'ensemble de l'économie, serait une solution plus appropriée pour aborder le problème du changement climatique. 
-                    
-                    Il préconise également des mesures d'interdiction, comme l'interdiction des véhicules thermiques et de la publicité associée, ainsi que des politiques ciblées, comme une stratégie de décroissance du secteur de l'aviation commerciale. 
-                    
-                    Selon Parrique, se concentrer uniquement sur la taxe carbone et la croissance verte serait insuffisant face à la gravité du défi climatique. 
-                    
-                    En conclusion, il semble que Parrique plaide pour une approche intégrée et radicale pour allier questions sociales et fiscalité carbone, incluant des quotas carbone, des interdictions spécifiques et une réorientation des secteurs les plus polluants. </p>
-                </div>
-              </div>
             {/if}
-            {#if activeSection === 3}
-            <div class="flex justify-center mt-10">
-                <div class="w-1/3 px-4">
-                  <a href="#Cabinets de conseil" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Cabinets de conseil
-                  </a>
-                </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Chambre de commerce et d’industrie" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Chambre de commerce et d’industrie
-                  </a>
-                </div>
-                
-            </div>
 
-            <div class="flex items-center">
-              <img src="conseil.png" alt="Image 3" class="w-16 h-16 mr-4">
-              <div>
-                <h2 id="Cabinets de conseil" class="text-xl font-bold mb-2">Cabinets de conseil</h2>
-                <p class="text-gray-700 mb-4">Prix du Carbone : Les cabinets de conseil KPMG et EY soulignent l'importance d'un prix stable pour le carbone comme incitatif pour changer les comportements des entreprises, malgré le risque d'impact disproportionné sur les petites entreprises et le risque de fuites de carbone en cas de hausse de prix dans un seul pays. 
 
-                    Implications Financières : Les entreprises devront intégrer ce nouveau coût, le prix du carbone, dans leur modèle économique. Cela nécessitera une étroite collaboration entre les équipes fiscales et les dirigeants pour comprendre comment cette taxe affectera les prix finaux pour les consommateurs. 
-                    
-                    Impact sur le Chiffre d'Affaires : Une étude d'ECOACT révèle que le coût du carbone pourrait atteindre plus de 10% du chiffre d'affaires des secteurs les plus dépendants des énergies fossiles d'ici 2030, avec des implications majeures pour la cimenterie, la métallurgie, les services publics, le transport et la production d'énergie. 
-                    
-                    Coûts de Production : EY a montré qu'une taxe carbone de 25 dollars/tCO2eq aux Etats-Unis pourrait entraîner une augmentation moyenne de 0,7% des coûts de production dans 8 industries majeures et leurs sous-industries. Cet effet pourrait probablement se retrouver en France. 
-                    
-                    Impact sur la Chaîne de Valeur : Les études soulignent que l'impact de la taxe carbone ne se limite pas aux entreprises directement soumises à un prix réglementaire du carbone. Les secteurs moins carbonés peuvent également être touchés en raison de la répercussion du coût du carbone au sein des chaînes de valeur (scope 3). 
-                    
-                    Questions Sociales et Fiscalité Carbone : Pour allier les questions sociales et la fiscalité carbone en France, il faut tenir compte de la capacité des entreprises à répercuter le coût de la taxe sur leurs clients, de l'impact potentiel sur le pouvoir d'achat des consommateurs, et de l'importance d'appliquer des stratégies d'atténuation pour les secteurs et les entreprises les plus touchés. 
-                    
-                     </p>
-              </div>
-            </div>
             
-            <div class="flex items-center">
-                <img src="chambredecommerce.png" alt="Image 3" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="Chambre de commerce et d’industrie" class="text-xl font-bold mb-2">Chambre de commerce et d’industrie</h2>
-                  <p class="text-gray-700 mb-4">Transition équitable : La Chambre de Commerce et d'Industrie (CCI) soutient la transition écologique mais insiste sur une mise en œuvre équitable pour les entreprises de toutes tailles. 
+            {#if activeSection === 3}
 
-                    Accompagnement des PME : La CCI prône une mise en place progressive de la taxe carbone, avec des mesures d'accompagnement spécifiques pour les petites et moyennes entreprises, potentiellement les plus affectées par l'augmentation des coûts énergétiques. 
-                    
-                    Financement de la transition : Les recettes de la taxe carbone, selon la CCI, devraient servir à financer des politiques de transition écologique et des mesures d'accompagnement pour les entreprises. 
-                    
-                    Harmonisation européenne : Pour éviter les distorsions de concurrence, la CCI recommande une harmonisation de la taxe carbone au niveau européen. 
-                    
-                    Responsabilité des entreprises : La CCI encourage les entreprises à prendre en compte leur responsabilité sociale et environnementale en adoptant des pratiques plus durables. 
-                    
-                    Préparation au changement climatique : Adopter des pratiques plus durables permettra aux entreprises de mieux se préparer aux défis du changement climatique tout en améliorant leur image auprès des clients et des parties prenantes. </p>
-                </div>
+            <div class="fixed top-80 mt-7 flex justify-around w-full px-4">
+              <div class="mb-10">
+                <a href="#Cabinets de conseil" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Cabinets de conseil
+                </a>
               </div>
+              <div class=" mb-10">
+                <a href="#parrique" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Chambre de commerce et d’industrie
+                </a>
+              </div>
+  
+          </div>
+
+          <div class="">
+          <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=20">
+            <img src="conseil.png" alt="Image 1" class="w-1/4 mr-4">
+            <div>
+              <h2 id="Cabinets de conseil" class="text-xl font-bold mb-2">Cabinets de conseil</h2>
+              <p class="text-gray-700 mb-4 justify-text px-20">Prix du Carbone : Les cabinets de conseil KPMG et EY soulignent l'importance d'un prix stable pour le carbone comme incitatif pour changer les comportements des entreprises, malgré le risque d'impact disproportionné sur les petites entreprises et le risque de fuites de carbone en cas de hausse de prix dans un seul pays. 
+
+                Implications Financières : Les entreprises devront intégrer ce nouveau coût, le prix du carbone, dans leur modèle économique. Cela nécessitera une étroite collaboration entre les équipes fiscales et les dirigeants pour comprendre comment cette taxe affectera les prix finaux pour les consommateurs. 
+                
+                Impact sur le Chiffre d'Affaires : Une étude d'ECOACT révèle que le coût du carbone pourrait atteindre plus de 10% du chiffre d'affaires des secteurs les plus dépendants des énergies fossiles d'ici 2030, avec des implications majeures pour la cimenterie, la métallurgie, les services publics, le transport et la production d'énergie. 
+                
+                Coûts de Production : EY a montré qu'une taxe carbone de 25 dollars/tCO2eq aux Etats-Unis pourrait entraîner une augmentation moyenne de 0,7% des coûts de production dans 8 industries majeures et leurs sous-industries. Cet effet pourrait probablement se retrouver en France. 
+                
+                Impact sur la Chaîne de Valeur : Les études soulignent que l'impact de la taxe carbone ne se limite pas aux entreprises directement soumises à un prix réglementaire du carbone. Les secteurs moins carbonés peuvent également être touchés en raison de la répercussion du coût du carbone au sein des chaînes de valeur (scope 3). 
+                
+                Questions Sociales et Fiscalité Carbone : Pour allier les questions sociales et la fiscalité carbone en France, il faut tenir compte de la capacité des entreprises à répercuter le coût de la taxe sur leurs clients, de l'impact potentiel sur le pouvoir d'achat des consommateurs, et de l'importance d'appliquer des stratégies d'atténuation pour les secteurs et les entreprises les plus touchés.</p>
+            </div>
+          </div>
+          <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=30">
+              
+              <div>
+                <h2 id="Chambre de commerce et d’industrie" class=" text-xl font-bold mb-2">Chambre de commerce et d’industrie</h2>
+                <p class="text-gray-700 mb-4 justify-text px-20">Transition équitable : La Chambre de Commerce et d'Industrie (CCI) soutient la transition écologique mais insiste sur une mise en œuvre équitable pour les entreprises de toutes tailles. 
+
+                  Accompagnement des PME : La CCI prône une mise en place progressive de la taxe carbone, avec des mesures d'accompagnement spécifiques pour les petites et moyennes entreprises, potentiellement les plus affectées par l'augmentation des coûts énergétiques. 
+                  
+                  Financement de la transition : Les recettes de la taxe carbone, selon la CCI, devraient servir à financer des politiques de transition écologique et des mesures d'accompagnement pour les entreprises. 
+                  
+                  Harmonisation européenne : Pour éviter les distorsions de concurrence, la CCI recommande une harmonisation de la taxe carbone au niveau européen. 
+                  
+                  Responsabilité des entreprises : La CCI encourage les entreprises à prendre en compte leur responsabilité sociale et environnementale en adoptant des pratiques plus durables. 
+                  
+                  Préparation au changement climatique : Adopter des pratiques plus durables permettra aux entreprises de mieux se préparer aux défis du changement climatique tout en améliorant leur image auprès des clients et des parties prenantes. </p>
+              </div>
+              <img src="chambredecommerce.png" alt="Image 1" class="w-1/4">
+            </div>
+          
+          </div>
+
 
             {/if}
             {#if activeSection === 4}
             
-            <div class="flex justify-center mt-10">
-                <div class="w-1/3 px-4">
-                  <a href="#MEDEF" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    MEDEF
-                  </a>
-                </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Syndicats des travailleurs" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Syndicats des travailleurs
-                  </a>
-                </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Candidats à la présidentielle" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Candidats à la présidentielle
-                  </a>
-                </div>
-            </div>
+            <div class="fixed top-80 mt-7 flex justify-around w-full px-4">
+              <div class="mb-10">
+                <a href="#MEDEF" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  MEDEF
+                </a>
+              </div>
+              <div class=" mb-10">
+                <a href="#Syndicats des travailleurs" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Syndicats des travailleurs
+                </a>
+              </div>
+              <div class="mb-10">
+                <a href="#Candidats à la présidentielle" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Candidats à la présidentielle
+                </a>
+              </div>
+              
+          </div> 
 
+          <div class="">
+          <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=20">
+            <img src="medef.png" alt="Image 1" class="w-1/4 mr-4">
             <div>
-                <div class="flex items-center">
-                    <img src="medef.png" alt="Image 3" class="w-16 h-16 mr-4">
-                    <div>
-                      <h2 id="MEDEF" class="text-xl font-bold mb-2">MEDEF</h2>
-                      <p class="text-gray-700 mb-4">Instabilité Fiscale: L'instabilité due à la crise des gilets jaunes et l'augmentation de la taxe carbone sont vues comme des défis par les entrepreneurs français. 
+              <h2 id="MEDEF" class="text-xl font-bold mb-2">MEDEF</h2>
+              <p class="text-gray-700 mb-4 justify-text px-20">Instabilité Fiscale: L'instabilité due à la crise des gilets jaunes et l'augmentation de la taxe carbone sont vues comme des défis par les entrepreneurs français. 
 
-                        Maintien de la Fiscalité: Les entrepreneurs français souhaitent maintenir la stabilité fiscale et juridique pour planifier l'avenir et éviter une augmentation de leur niveau d'imposition. 
-                        
-                        Acceptation de la Taxe Carbone: Le MEDEF n'est pas opposé à la taxe carbone, reconnaissant l'importance de préparer la transition énergétique avec une fiscalité dédiée. 
-                        
-                        Croissance et Décarbonation: Pour le MEDEF, il ne peut y avoir de décarbonation sans croissance économique. 
-                        
-                        Redistribuer les Taxes: Le MEDEF propose qu'un euro de taxe carbone devrait correspondre à un euro de taxe en moins ailleurs. 
-                        
-                        Planification de la Transition: Le MEDEF souligne l'importance d'avoir des calendriers pour la progression de la taxe carbone, afin que les entreprises puissent anticiper leurs actions, ces calendriers devant être compatibles avec l'état de la technologie. </p>
-                    </div>
-                  </div>
+                Maintien de la Fiscalité: Les entrepreneurs français souhaitent maintenir la stabilité fiscale et juridique pour planifier l'avenir et éviter une augmentation de leur niveau d'imposition. 
                 
+                Acceptation de la Taxe Carbone: Le MEDEF n'est pas opposé à la taxe carbone, reconnaissant l'importance de préparer la transition énergétique avec une fiscalité dédiée. 
                 
-                  <div class="flex items-center">
-                    <img src="cgtcfdt.png" alt="Image 3" class="w-16 h-16 mr-4">
-                    <div>
-                      <h2 id="Syndicats de travailleurs " class="text-xl font-bold mb-2">Syndicats de travailleurs </h2>
-                      <p class="text-gray-700 mb-4">Soutien de la CFDT: Le syndicat, dirigé par Laurent Berger, soutient une taxe carbone, la jugeant nécessaire pour financer la transition écologique. 
+                Croissance et Décarbonation: Pour le MEDEF, il ne peut y avoir de décarbonation sans croissance économique. 
+                
+                Redistribuer les Taxes: Le MEDEF propose qu'un euro de taxe carbone devrait correspondre à un euro de taxe en moins ailleurs. 
+                
+                Planification de la Transition: Le MEDEF souligne l'importance d'avoir des calendriers pour la progression de la taxe carbone, afin que les entreprises puissent anticiper leurs actions, ces calendriers devant être compatibles avec l'état de la technologie. </p>
+            </div>
+          </div>
+          <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=30">
+              
+              <div>
+                <h2 id="Syndicats des travailleurs" class=" text-xl font-bold mb-2">Syndicats des travailleurs</h2>
+                <p class="text-gray-700 mb-4 justify-text px-20">Soutien de la CFDT: Le syndicat, dirigé par Laurent Berger, soutient une taxe carbone, la jugeant nécessaire pour financer la transition écologique. 
 
-                        Compensation pour les Ménages Modestes: La CFDT estime qu'il est crucial de mettre en place un mécanisme de compensation pour les ménages les plus modestes afin de contrebalancer les coûts de la taxe carbone. 
-                        
-                        Opposition de la CGT: La CGT est contre la composante carbone telle qu'elle est actuellement conçue, appelant à une réforme plus globale de la fiscalité. 
-                        
-                        Taxation du Capital: La CGT propose de taxer davantage ceux qui ont le plus de moyens, suggérant une taxation accrue du capital plutôt que du travail. 
-                        
-                        Allégement des Taxes Indirectes: La CGT propose un allégement des taxes indirectes, qui pèsent plus lourdement sur les ménages modestes. 
-                        
-                        Taxation des Entreprises et Transactions Financières: La CGT suggère une responsabilisation accrue des entreprises et une taxation des transactions financières pour financer la transition écologique. </p>
-                    </div>
-                  </div>
-                
+                  Compensation pour les Ménages Modestes: La CFDT estime qu'il est crucial de mettre en place un mécanisme de compensation pour les ménages les plus modestes afin de contrebalancer les coûts de la taxe carbone. 
                   
-                  <div class="flex items-center">
-                    <img src="presidentielle2022.png" alt="Image 3" class="w-16 h-16 mr-4">
-                    <div>
-                      <h2 id="Candidats à la présidentielle" class="text-xl font-bold mb-2">Candidats à la présidentielle</h2>
-                      <p class="text-gray-700 mb-4">Marine Le Pen (Rassemblement National): 
+                  Opposition de la CGT: La CGT est contre la composante carbone telle qu'elle est actuellement conçue, appelant à une réforme plus globale de la fiscalité. 
+                  
+                  Taxation du Capital: La CGT propose de taxer davantage ceux qui ont le plus de moyens, suggérant une taxation accrue du capital plutôt que du travail. 
+                  
+                  Allégement des Taxes Indirectes: La CGT propose un allégement des taxes indirectes, qui pèsent plus lourdement sur les ménages modestes. 
+                  
+                  Taxation des Entreprises et Transactions Financières: La CGT suggère une responsabilisation accrue des entreprises et une taxation des transactions financières pour financer la transition écologique.</p>
+              </div>
+              <img src="cgtcfdt.png" alt="Image 1" class="w-1/4">
+            </div>
+          <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=40">
+              <img src="presidentielles2022.png" alt="Image 1" class="w-1/4">
+              <div>
+                <h2 id="Candidats à la présidentielle" class="text-xl font-bold mb-2">Candidats à la présidentielle</h2>
+                <p class="text-gray-700 mb-4 justify-text px-20">
+                  
+                  Marine Le Pen (Rassemblement National): 
 
                         Préconise une réduction de la taxe TICPE sur les carburants pour préserver le pouvoir d'achat. 
                         
@@ -371,54 +387,55 @@
                         
                         Propose une "taxe kilométrique" aux frontières de la France, plutôt qu'aux frontières de l'UE. 
                         
-                        Envisage le rétablissement et le renforcement de l'ISF, avec un "volet climatique" pour taxer les gros pollueurs. </p>
-                    </div>
-                  </div>
-            </div>
-            
-
+                        Envisage le rétablissement et le renforcement de l'ISF, avec un "volet climatique" pour taxer les gros pollueurs.</p>
+              </div>
+          </div>
+          
+        
             {/if}
 
             {#if activeSection === 5}
             
-            <div class="flex justify-center mt-10">
-                <div class="w-1/3 px-4">
-                  <a href="#Réseau climat France" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+            <div class="fixed top-80 flex justify-around w-full px-4 mt-10">
+                <div class="px-4 mb-10">
+                  <a href="#Réseau climat France" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Réseau climat France
                   </a>
                 </div>
-                <div class="w-1/3 px-4">
-                  <a href="#OXFAM" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <div class="px-4 mb-10">
+                  <a href="#OXFAM" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     OXFAM
                   </a>
                 </div>
-                <div class="w-1/3 px-4">
-                  <a href="#ATTAC" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <div class="px-4 mb-10">
+                  <a href="#ATTAC" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     ATTAC
                   </a>
                 </div>
-                <div class="w-1/3 px-4">
-                  <a href="#Greenpeace" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <div class="px-4 mb-10">
+                  <a href="#Greenpeace" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                     Greenpeace
                   </a>
                 </div>
-                <div class="w-1/3 px-4">
-                    <a href="#Fondation Nicolas Hulot" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                <div class="px-4 mb-10">
+                    <a href="#Fondation Nicolas Hulot" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                         Fondation Nicolas Hulot
                     </a>
                   </div>
-                  <div class="w-1/3 px-4">
-                    <a href="#WWF" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  <div class="px-4 mb-10">
+                    <a href="#WWF" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
                         WWF
                     </a>
                   </div>
             </div>
 
+            
+        
             <div class="flex items-center">
-                <img src="reseauclimat.png" alt="Image 3" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="Réseau climat France  " class="text-xl font-bold mb-2">Réseau climat France</h2>
-                  <p class="text-gray-700 mb-4">Prise de conscience : Le Réseau Action Climat France, collectif composé de 37 associations, est conscient des impacts négatifs du changement climatique et soutient des mesures pour l'environnement, l'emploi, la santé et la justice sociale. 
+                <img src="reseauclimat.png" alt="Image 3" class="w-1/3 h-1/3 mr-4 border-solid border-2 ">
+                <div class=" bg-gradient-to-b from-green-200 via-white to-orange-200 ">
+                  <h2 id="Réseau climat France  " class="text-xl font-bold mx-4 text-center py-4 ">Réseau climat France</h2>
+                  <p class="text-gray-700 mb-4 mx-4 text-justify">Prise de conscience : Le Réseau Action Climat France, collectif composé de 37 associations, est conscient des impacts négatifs du changement climatique et soutient des mesures pour l'environnement, l'emploi, la santé et la justice sociale. 
 
                     Transition juste : Le collectif promeut une transition équitable vers une société plus durable, bénéfique à toutes les parties prenantes. 
                     
@@ -432,10 +449,10 @@
                 </div>
               </div>
               <div class="flex items-center">
-                <img src="oxfam.png" alt="Image 3" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="OXFAM" class="text-xl font-bold mb-2">OXFAM</h2>
-                  <p class="text-gray-700 mb-4">ONG engagée : OXFAM, organisation non gouvernementale internationale, lutte contre la pauvreté et les injustices mondiales et soutient les efforts contre le changement climatique. 
+                
+                <div class="bg-gradient-to-b from-orange-200 via-white to-rose-200">
+                  <h2 id="OXFAM" class="text-xl font-bold mx-4 text-center py-4">OXFAM</h2>
+                  <p class="text-gray-700 mb-4 mx-4 text-justify">ONG engagée : OXFAM, organisation non gouvernementale internationale, lutte contre la pauvreté et les injustices mondiales et soutient les efforts contre le changement climatique. 
 
                     Soutien à la CCE : Oxfam approuve la Contribution Climat Énergie (CCE) ou taxe carbone comme moyen efficace d'encourager les ménages et les entreprises à diminuer leur consommation de combustibles fossiles. 
                     
@@ -447,12 +464,13 @@
                     
                     Équité : En résumé, Oxfam plaide pour une taxe carbone équitable qui favorise à la fois l'environnement et la justice sociale. </p>
                 </div>
+                <img src="oxfam.png" alt="Image 3" class="w-1/3 h-1/3 mr-4">
               </div>
               <div class="flex items-center">
-                <img src="attac.png" alt="Image 3" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="ATTAC" class="text-xl font-bold mb-2">ATTAC</h2>
-                  <p class="text-gray-700 mb-4">Approche multidimensionnelle : ATTAC, ONG altermondialiste, souligne que la taxe carbone n'est qu'une partie de la solution au changement climatique. D'autres mesures, comme la réglementation des émissions de CO2 et la transition vers les énergies renouvelables, sont également nécessaires. 
+                <img src="attac.png" alt="Image 3" class="w-1/5 h-1/5 mr-4">
+                <div class="bg-gradient-to-b from-rose-200 via-white to-violet-200">
+                  <h2 id="ATTAC" class="text-xl font-bold mx-4 text-center py-4">ATTAC</h2>
+                  <p class="text-gray-700 mb-4 mx-4 text-justify">Approche multidimensionnelle : ATTAC, ONG altermondialiste, souligne que la taxe carbone n'est qu'une partie de la solution au changement climatique. D'autres mesures, comme la réglementation des émissions de CO2 et la transition vers les énergies renouvelables, sont également nécessaires. 
 
                     Transition écologique socialement équitable : Selon ATTAC, la transition écologique doit se faire de manière socialement juste, avec une redistribution équitable des revenus générés par la taxe carbone. 
                     
@@ -466,10 +484,10 @@
                 </div>
               </div>
               <div class="flex items-center">
-                <img src="greenpeace.png" alt="Image 3" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="Greenpeace" class="text-xl font-bold mb-2">Greenpeace</h2>
-                  <p class="text-gray-700 mb-4">Position initiale : Greenpeace a salué l'introduction de la taxe carbone en France en 2014 comme un pas vers la lutte contre le changement climatique et la promotion d'une économie verte, tout en mettant en évidence la nécessité de mesures d'accompagnement social. 
+                
+                <div class="bg-gradient-to-b from-violet-200 via-white to-green-200">
+                  <h2 id="Greenpeace" class="text-xl font-bold mx-4 text-center py-4">Greenpeace</h2>
+                  <p class="text-gray-700 mb-4 mx-4 text-justify">Position initiale : Greenpeace a salué l'introduction de la taxe carbone en France en 2014 comme un pas vers la lutte contre le changement climatique et la promotion d'une économie verte, tout en mettant en évidence la nécessité de mesures d'accompagnement social. 
 
                     Critiques : L'organisation a critiqué la taxe carbone française pour son insuffisance à atteindre les objectifs climatiques, en soulignant également l'injustice des exemptions accordées aux grandes entreprises émettrices. 
                     
@@ -481,12 +499,13 @@
                     
                     L'ISF Climatique : Greenpeace propose une redistribution plus équitable des richesses par le biais d'un "ISF Climatique", faisant partie d'un effort plus large pour lutter contre le changement climatique et investir dans une économie verte et équitable. </p>
                 </div>
+                <img src="greenpeace.png" alt="Image 3" class="w-1/3 h-1/3 mr-4">
               </div>
               <div class="flex items-center">
-                <img src="FNH.png" alt="Image 3" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="Fondation Nicolas Hulot" class="text-xl font-bold mb-2">Fondation Nicolas Hulot</h2>
-                  <p class="text-gray-700 mb-4">Préambule : La Fondation pour la Nature et l'Homme (FNH), fondée par l'écologiste Nicolas Hulot, est dédiée à la protection de l'environnement et à la lutte contre le changement climatique, avec des initiatives allant de la protection de la biodiversité à la transition énergétique. 
+                <img src="FNH.png" alt="Image 3" class="w-1/3 h-1/3 mr-4">
+                <div class="bg-gradient-to-b from-green-200 via-white to-orange-200">
+                  <h2 id="Fondation Nicolas Hulot" class="text-xl font-bold mx-4 text-center py-4">Fondation Nicolas Hulot</h2>
+                  <p class="text-gray-700 mb-4 mx-4 text-justify">Préambule : La Fondation pour la Nature et l'Homme (FNH), fondée par l'écologiste Nicolas Hulot, est dédiée à la protection de l'environnement et à la lutte contre le changement climatique, avec des initiatives allant de la protection de la biodiversité à la transition énergétique. 
 
                     La taxe carbone : La FNH voit la taxe carbone comme un outil important pour encourager la transition vers une économie décarbonée, mais souligne qu'elle doit être conçue de manière équitable. 
                     
@@ -501,10 +520,10 @@
               </div>
 
               <div class="flex items-center">
-                <img src="WWF.png" alt="Image 3" class="w-16 h-16 mr-4">
-                <div>
-                  <h2 id="WWF" class="text-xl font-bold mb-2">WWF</h2>
-                  <p class="text-gray-700 mb-4">Introduction : Le World Wide Fund for Nature (WWF) est une ONG environnementale internationale dédiée à la conservation de la biodiversité et à l'utilisation durable des ressources naturelles. 
+                
+                <div class="bg-gradient-to-b from-orange-200 via-white to-rose-200">
+                  <h2 id="WWF" class="text-xl font-bold mx-4 text-center py-4">WWF</h2>
+                  <p class="text-gray-700 mb-4 mx-4 text-justify">Introduction : Le World Wide Fund for Nature (WWF) est une ONG environnementale internationale dédiée à la conservation de la biodiversité et à l'utilisation durable des ressources naturelles. 
 
                     La taxe carbone : Le WWF soutient la taxe carbone en tant qu'outil efficace pour réduire les émissions de gaz à effet de serre et lutter contre le changement climatique, mais insiste sur sa mise en œuvre de manière socialement équitable. 
                     
@@ -516,6 +535,7 @@
                     
                     Appel à une réflexion plus large : Le WWF appelle à une réflexion plus large sur la fiscalité écologique, la combinant avec des mesures de redistribution pour réduire les inégalités sociales et économiques, tout en encourageant les politiques à s'engager dans une véritable transition énergétique.</p>
                 </div>
+                <img src="WWF.png" alt="Image 3" class="w-96  h-96 mr-4">
             </div>
 
             {/if}
@@ -523,18 +543,27 @@
         </div>
       </div>
       
-      
-      {/if}
     </div>
   </main>
   
   <style>
-    
-    
+   @keyframes pulse {
+  0% { transform: scale(1); background-color: #48BB78;}
+  50% { transform: scale(1.1); background-color: #000000; }
+  100% { transform: scale(1); background-color: #ECC94B;}
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
     p {
       white-space: pre-line;
     }
 
+    .anchor {
+        scroll-margin-top: b-8; 
+    }
 
   
     </style>
