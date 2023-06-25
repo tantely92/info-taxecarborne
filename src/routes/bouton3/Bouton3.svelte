@@ -15,6 +15,8 @@
   });
 
   let apiResult = null;
+  let suggestions = [];
+  let maxSuggestion = 5
 
   const { form, errors, handleChange, handleSubmit, isSubmitting, handleReset } = createForm({
     initialValues: { socialFair: 10, ecoFair: 10, pricing: 10, suggestion: "" },
@@ -25,6 +27,7 @@
           var result = await supabase.from("avis").insert(values);
           if (result.status === 201) {
               apiResult = true;
+              loadSuggestions();
           } else {
               apiResult = false;
           }
@@ -47,9 +50,20 @@
     function toggleSection(section) {
       activeSection = section === activeSection ? null : section;
       let image = document.getElementById("imageToFade");
-    if (image) {
-      image.remove();
+      if (image) {
+        image.remove();
+      }
     }
+    async function loadSuggestions(){
+      const { data, error } = await supabase
+        .from('avis')
+        .select('suggestion');
+
+      if (error) {
+        console.error(error);
+        return [];
+      }
+      suggestions = data;
     }
   </script>
   
@@ -336,9 +350,18 @@
                   {:else}
                       <InlineNotification lowContrast kind="error"
                           title="Erreur interne du serveur : "
-                          subtitle="Merci de réessayer"
+                          subtitle="Merci de recharger la page et réessayer"
                       />
-                  {/if} 
+                  {/if}
+                  {#if suggestions !== null}
+                  <div>
+                    {#each suggestions as item, i}
+                      {#if i < maxSuggestion}
+                        <div>{item.suggestion}</div>
+                      {/if}
+                    {/each}
+                  </div>
+                  {/if}
                 {:else}
                   <Form on:submit={handleSubmit}>
                     <FormGroup>
