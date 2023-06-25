@@ -18,28 +18,28 @@
   
   <main class="w-full h-full mt-28  bg-gradient-to-r from-green-200 py-10">
     <div class="relative top-64 px-10 mx-auto text-center  z-50">
-    <div class="fixed w-full h-auto top-40 bg-gradient-to-r from-green-200 ">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold mb-4 mt-10">Inspirez vous...</h1>
-      </div>
+      <div class="fixed w-full h-auto top-40 bg-gradient-to-r from-green-200 ">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-4 mt-10">Inspirez vous...</h1>
+        </div>
       
-      <div class=" flex justify-around mt-10">
-        <div class="px-4">
-          <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
+        <div class=" flex justify-around mt-10">
+          <div class="px-4">
+            <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(1)}>
             ...des économistes environnementaux
-          </button>
-        </div>
-        <div class="px-4">
-          <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
-            ...des économistes écologiques
-          </button>
-        </div>
-        <div class="px-4">
-          <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
-            ...du monde de l’entreprise
-          </button>
-        </div>
-        <div class="px-4">
+            </button>
+          </div>
+          <div class="px-4">
+            <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(2)}>
+              ...des économistes écologiques
+            </button>
+          </div>
+          <div class="px-4">
+            <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(3)}>
+              ...du monde de l’entreprise
+            </button>
+          </div>
+          <div class="px-4">
             <button class="bg-green-500 hover:bg-green-600 transform hover:scale-105 transition-transform duration-200 text-white font-bold py-2 px-4 rounded mb-4" on:click={() => toggleSection(4)}>
                 ...de la sphère politique
             </button>
@@ -53,7 +53,7 @@
         <div class="flex justify-center  h-screen">
         <div class="blur-sm">
             <img id="imageToFade" src="Partagearbre.png" alt="Image 1" class="w-full object-cover  mr-4">
-          </div>
+        </div>
       </div>
     </div>
       
@@ -67,34 +67,34 @@
             {#if activeSection === 1}
 
             <div class="fixed top-80 mt-7 flex justify-around w-full px-4">
-                <div class="mb-10">
-                  <a href="#Jean-Charles Hourcade" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Jean-Charles Hourcade
-                  </a>
-                </div>
-                <div class=" mb-10">
-                  <a href="#Jean Tirole" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Jean Tirole
-                  </a>
-                </div>
-                <div class="mb-10">
-                  <a href="#Picketty" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Picketty
-                  </a>
-                </div>
-                <div class="mb-10">
-                  <a href="#Pindick" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
-                    Pindyck
-                  </a>
-                </div>
+              <div class="mb-10">
+                <a href="#Jean-Charles Hourcade" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Jean-Charles Hourcade
+                </a>
+              </div>
+              <div class=" mb-10">
+                <a href="#Jean Tirole" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Jean Tirole
+                </a>
+              </div>
+              <div class="mb-10">
+                <a href="#Picketty" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Picketty
+                </a>
+              </div>
+              <div class="mb-10">
+                <a href="#Pindick" class="pulse bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mb-4">
+                  Pindyck
+                </a>
+              </div>
             </div>
 
             <div class="">
-            <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=20">
-              <img src="hourcade.png" alt="Image 1" class="w-1/4 mr-4">
-              <div>
-                <h2 id="Jean-Charles Hourcade" class="text-xl font-bold mb-2">Jean-Charles Hourcade</h2>
-                <p class="text-gray-700 mb-4 justify-text px-20">Jean-Charles Hourcade, économiste et spécialiste du changement climatique, dénonce le brouillage autour de la taxe carbone, souvent présentée comme punitivement antinomique avec l'économie et la justice sociale. 
+              <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200 z=20">
+                <img src="hourcade.png" alt="Image 1" class="w-1/4 mr-4">
+                <div>
+                  <h2 id="Jean-Charles Hourcade" class="text-xl font-bold mb-2">Jean-Charles Hourcade</h2>
+                  <p class="text-gray-700 mb-4 justify-text px-20">Jean-Charles Hourcade, économiste et spécialiste du changement climatique, dénonce le brouillage autour de la taxe carbone, souvent présentée comme punitivement antinomique avec l'économie et la justice sociale. 
 
                     Il réfute l'idée que la taxe carbone est punitive et culpabilisatrice, arguant qu'elle stimule l'innovation, modifie les comportements non durables et corrige les marchés défaillants. 
                     
@@ -105,8 +105,8 @@
                     L'implémentation réussie de la taxe carbone nécessite une gouvernance efficace et une action collective, avec un prix unique à l'échelle européenne. 
                     
                     L'un des points clés pour allier questions sociales et fiscalité carbone en France serait l'utilisation des recettes de cette taxe à des fins sociales - par exemple, en réduisant les charges pour les foyers les plus affectés et à faibles revenus, pour favoriser l'emploi tout en luttant contre le changement climatique. </p>
+                </div>
               </div>
-            </div>
             <div class="sticky top-96 flex items-center  bg-gradient-to-b from-green-200 via-white to-orange-200  z=30">
                 
                 <div>
@@ -390,7 +390,7 @@
                         Envisage le rétablissement et le renforcement de l'ISF, avec un "volet climatique" pour taxer les gros pollueurs.</p>
               </div>
           </div>
-          
+        </div>
         
             {/if}
 
@@ -542,7 +542,7 @@
           </div>
         </div>
       </div>
-      
+      {/if}
     </div>
   </main>
   
