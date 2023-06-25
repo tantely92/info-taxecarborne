@@ -404,61 +404,61 @@
 
 
 .background1 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('recettesfiscales.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/recettesfiscales.png');
     background-size: cover;
     background-position: center;
   }
 
   .background2 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('emploi.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/emploi.png');
     background-size: cover;
     background-position: center;
   }
 
   .background3 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Livrearbre.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Livrearbre.png');
     background-size: cover;
     background-position: center;
   }
 
   .background4 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('menages.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/menages.png');
     background-size: cover;
     background-position: center;
   }
 
   .background5 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('flexibilite.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/flexibilite.png');
     background-size: cover;
     background-position: center;
   }
 
   .background6 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Marchecarbone.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Marchecarbone.png');
     background-size: cover;
     background-position: center;
   }
 
   .background7 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('autrestarifs.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/autrestarifs.png');
     background-size: cover;
     background-position: center;
   }
 
   .background8 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('methane.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/methane.png');
     background-size: cover;
     background-position: center;
   }
 
   .background9 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('conseil.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/conseil.png');
     background-size: cover;
     background-position: center;
   }
 
   .background10 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('fondaquarelle.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/fondaquarelle.jpg');
     background-size: cover;
     background-position: center;
   }

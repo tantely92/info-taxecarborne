@@ -136,7 +136,7 @@
 
 <style>
 .background10 {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Livrearbre.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../static/Livrearbre.png');
   background-size: cover;
   background-position: center;
 }

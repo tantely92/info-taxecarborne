@@ -278,55 +278,55 @@ p {
 }
 
 .background1 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Mondecarbone.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Mondecarbone.png');
     background-size: cover;
     background-position: center;
   }
 
   .background2 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Marchecarbone.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Marchecarbone.png');
     background-size: cover;
     background-position: center;
   }
 
   .background3 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Unioneuropenneecologie.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Unioneuropenneecologie.png');
     background-size: cover;
     background-position: center;
   }
 
   .background4 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Prixducarboneinterne.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Prixducarboneinterne.png');
     background-size: cover;
     background-position: center;
   }
 
   .background5 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Taxecarbone.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Taxecarbone.png');
     background-size: cover;
     background-position: center;
   }
 
   .background6 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('ecotaxe.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/ecotaxe.png');
     background-size: cover;
     background-position: center;
   }
 
   .background7 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('gilletsjaunesmanif.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/gilletsjaunesmanif.png');
     background-size: cover;
     background-position: center;
   }
 
   .background8 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Nouveautetaxe.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/Nouveautetaxe.png');
     background-size: cover;
     background-position: center;
   }
 
   .background9 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('chiffrestaxe.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../static/chiffrestaxe.png');
     background-size: cover;
     background-position: center;
   }

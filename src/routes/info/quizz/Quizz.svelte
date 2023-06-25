@@ -55,7 +55,7 @@
 
 
 .background10 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('Nouveautetaxe.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../static/Nouveautetaxe.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

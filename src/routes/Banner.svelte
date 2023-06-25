@@ -44,7 +44,7 @@
     
   @import 'tailwindcss/tailwind.css';
   .background {
-    background-image: url('fondaquarelle.jpg'); 
+    background-image: url('../../static/fondaquarelle.jpg'); 
   }
   
   @keyframes fadeIn {
