@@ -30,7 +30,6 @@
 		state.result = event.detail;
 		state.component = "infos";
 		localStorage.setItem('infoState', JSON.stringify(state));
-		alert(state.result);
 	}
 </script>
 
